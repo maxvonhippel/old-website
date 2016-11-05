@@ -1,27 +1,117 @@
 {
- "name": "Table of Contents",
+ "name": "Contents",
  "children": [
   	{
-	   "name": "Coding Projects",
+	   "name": "Coding",
 	   "children": [
-		     {"name": "Completed", "size": 2},
-		     {"name": "Abandoned", "size": 2},
+		     {
+		     "name": "Completed",
+		      "children": [
+			      {"name": "Ratchet Amazon", "size": 2, "url": "https://github.com/maxvonhippel/Amazon-Mobile-Kit"},
+			      {"name": "JSON PruneCluster", "size": 2, "url": "https://github.com/maxvonhippel/PruneCluster"},
+			      {
+				      "name": "iOS",
+				      "children": [
+					      {"name": "Chetawani", "size": 2, "url": "https://itunes.apple.com/us/app/chetawani/id990010728?mt=8"},
+					      {"name": "BackNote", "size": 2, "url": "https://itunes.apple.com/us/app/backnote/id741559186?mt=8"},
+					      {"name": "Essayist", "size": 2, "url": "https://itunes.apple.com/us/app/essayist/id784276845?mt=8"},
+					      {"name": "Wall Grid", "size": 2, "url": "https://itunes.apple.com/us/app/wall-grid/id879981563?mt=8"},
+					      {"name": "Chirp Alert", "size": 2, "url": "https://itunes.apple.com/us/app/chirp-alert/id992969456?mt=8"},
+					      {"name": "Bluster", "size": 2, "url": "https://itunes.apple.com/us/app/bluster/id825146925?mt=8"},
+					      {"name": "Aglow LE", "size": 2, "url": "https://itunes.apple.com/us/app/aglow-le/id866376876?mt=8"},
+					      {"name": "Franca", "size": 2, "url": "https://itunes.apple.com/us/app/franca/id982879508?mt=8"},
+					      {"name": "cutlery", "size": 2, "url": "https://itunes.apple.com/us/app/cutlery/id1148457349?mt=8"},
+					      {"name": "GDORK", "size": 2, "url": "https://itunes.apple.com/us/app/gdork/id1145258813?mt=8"},
+					      {"name": "V-Speed Calculator", "size": 2, "url": "https://itunes.apple.com/us/app/v-speed-calculator/id1138201652?mt=8"},
+					      {"name": "Card Creator", "size": 2, "url": "https://itunes.apple.com/us/app/card-creator-catastrophic/id1128610675?mt=8"}
+				      ]
+			      }
+		      ]
+		      },
+		     {
+		     	"name": "Abandoned",
+		     	"children": [
+			     	{"name": "3D-Scanning Myself", "size": 2, "url": "https://www.diplomaframe.com/contests/frame-my-future-scholarship-contest-2015/details.aspx?entryID=71901"},
+			     	{"name": "Whoa!  Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"}
+		     	]
+		     },
 		     {"name": "In Progress", "size": 2}
 	    ]
     },
     {
-	    "name": "Photoblogging",
+	    "name": "Photos",
 	    "children": [
-			    {"name": "Road Trip - Anchorage to Flagstaff", "size": 2},
-			    {"name": "Nepal", "size": 2}	
+		 {
+		    	"name": "Blogging",
+		    	"children": [
+			    	{"name": "Road Trip", "size": 2},
+			    	{"name": "Nepal", "size": 2},
+			    	{"name": "500px Account", "size": 2, "url": "https://500px.com/maxvonhippel"}	
+			]
+		  },
+		  {
+			"name": "Pro",
+			"children": [
+				{"name": "Dartmouth IDOL", "size": 2, "url": "http://hopbackstage.org/2016/03/02/introducing-the-dartmouth-idol-2016-finalists/"},
+				{"name": "Dartmouth Barbary Coast", "size": 2, "url": "http://hopbackstage.org/2016/05/13/viral-worthy-videos-from-the-coast/"},
+				{"name": "Dartmouth Glee Club", "size": 2, "url": "http://hopbackstage.org/2016/04/26/sara-sitzer-on-rachmaninoffs-all-night-vigil/"},
+				{"name": "Dartmouth Collaborative Choreography", "size": 2, "url": "http://hopbackstage.org/2016/04/05/collaborative-choreography-at-collis-cabaret/"},
+				{"name": "Dartmouth Music & Pie", "size": 2, "url": "http://hopbackstage.org/2016/03/07/music-and-pie-of-course/"},
+				{"name": "Dartmouth Piano Master Class", "size": 2, "url": "http://hopbackstage.org/2016/01/29/whats-in-a-masterclass/"},
+				{"name": "Dartmouth Shakespeare & Pizza", "size": 2, "url": "http://hopbackstage.org/2016/01/18/shakespeare-doesnt-only-go-with-pizza/"},
+				{"name": "Dartmouth Production of Chicago", "size": 2, "url": "http://www.vnews.com/Archives/2016/02/Highlights-dc-vn-022516"}
+			]  
+		  }   
 	    ]
     },
     {
 	    "name": "Humor",
 	    "children": [
-			    {"name": "Alaska Humor", "size": 2},
-			    {"name": "Philosophy Humor", "size": 2},
+			    {
+			    	"name": "Alaska",
+			    	"children": [
+				    	{"name": "AK Heard", "size": 2, "url": "https://twitter.com/alaskaheard"}
+			    	]
+			    },
+			    {
+			    	"name": "Philosophy", 
+			    	"children": [
+				    	{"name": "HipHopNietzsche", "size": 2, "url": "https://twitter.com/HiphopNietzsche"}
+			    	]
+			    },
 			    {"name": "Stack Humor", "size": 2}
+	    ]
+    },
+    {
+	    "name": "Me Online",
+	    "children": [
+	    	{"name": "Stack Overflow", "size": 2, "url": "http://stackoverflow.com/users/1586231/max-von-hippel"},
+	    	{"name": "Keybase.io", "size": 2, "url": "https://keybase.io/maxvonhippel"},
+	    	{"name": "EVERYDAY CARRY", "size": 2, "url": "http://everydaycarry.com/profile/45394/max-von-hippel"},
+	    	{"name": "GitHub", "size": 2, "url": "https://github.com/maxvonhippel/"},
+	    	{"name": "Reddit", "size": 2, "url": "https://www.reddit.com/user/Maxvh/"},
+	    	{"name": "Twitter", "size": 2, "url": "https://twitter.com/_m_vh"},
+	    	{"name": "YouTube", "size": 2, "url": "https://www.youtube.com/c/MaxvonHippel"}
+	    ]
+    },
+    {
+	    "name": "Press, etc",
+	    "children": [
+		    {"name": "Infinity Dental", "size": 2, "url": "https://www.infinitydentalweb.com/scholarship-winners.html"},
+		    {"name": "Davis UWC Award", "size": 2, "url": "http://www.davisuwcscholars.org/scholars/class-of-2019/v/node/12685"},
+		    {"name": "Dickey Center Quake Summit", "size": 2, "url": "http://dickey.dartmouth.edu/global-engagement/conferences-initiatives/nepal-earthquake-summit"},
+		    {"name": "Featured in The Dartmouth D", "size": 2, "url": "http://www.thedartmouth.com/article/2015/10/an-eye-for-innovation/"},
+		    {"name": "Featured in The Dartmouth D (1996)", "size": 2, "url": "http://www.dartmouth.org/classes/89/Newsletters/1997%20March.htm"},
+		    {"name": "My Second Moment In The Media Spotlight, in 2002!", "size": 2, "url": "http://www.pitt.edu/~atsea/atsea.html"},
+		    {"name": "My ZipLine Video Mentioned By The Hotel", "size": 2, "url": "http://atitlanreserva.com/wp/en/2015/08/11/ziptrek-footage/"},
+		    {"name": "Got Advice From Marc Andreesen Through Twitter", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"}
+	    ]
+    },
+    {
+	    "name": "Boards & Bureaucracies",
+	    "children": [
+		    {"name": "UWC GO", "size": 2, "url": "http://www.uwcgo.org/about"},
+		    {"name": "Kathmandu Living Labs, Sep-Dec 2016", "size": 2, "url": "http://www.kathmandulivinglabs.org/team"}
 	    ]
     }
  ]
