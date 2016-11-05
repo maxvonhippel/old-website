@@ -43,8 +43,9 @@ d3.json("data/contents.json", function(error, root) {
     .text(function(d) { return d.name; });
 
   function click(d) {
-	if (d.name == "Completed")
-		alert(d.url);
+	if (d.url != null) {
+		location.href = d.url;
+	}
 	// fade out all text elements
 	text.transition().attr("opacity", 0);
 
