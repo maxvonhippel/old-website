@@ -32,7 +32,8 @@
 		     	"name": "Abandoned",
 		     	"children": [
 			     	{"name": "3D-Scanning Myself", "size": 2, "url": "https://www.diplomaframe.com/contests/frame-my-future-scholarship-contest-2015/details.aspx?entryID=71901"},
-			     	{"name": "Whoa!  Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"}
+			     	{"name": "Whoa!  Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"},
+			     	{"name": "Jazz Shot", "size": 2, "url": "/blog posts/jazzshot.html"}
 		     	]
 		     },
 		     {"name": "In Progress", "size": 2}

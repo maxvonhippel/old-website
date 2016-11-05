@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>jazzshot</title>
+	<! --- styles --->
+	<style>
+		#tutorial {
+	    	margin-top: 10px;
+			margin-bottom: 10px;
+			margin-right: 100px;
+			margin-left: 100px;
+		}
+		
+		ol {
+	    		width: 70%;
+	    		margin: auto;
+		}
+		
+		path {
+		  	stroke: #fff;
+		  	fill-rule: evenodd;
+		}
+		
+		text {
+		  	font-family: Arial, sans-serif;
+		  	font-size: 12px;
+		}
+
+	</style>
+</head>
+<body>
+
+<center><font face="Hiragino sans" color=#464646 size="3"><a href="../index.html">(HOME)</a></font></center>
+
+<center><font face="Hiragino sans" color=#464646 size="7">Jazz Shot, Part I: Design Stage.</font></center>
+
+<div id="tutorial">
+<font face="Hiragino sans" color=#323232 size="4">
+	Jazz Shot is a computer algorithm which synthesizes synesthesia in order to translate photographs into jazz music. There are two types of jazz music: <a href="https://www.youtube.com/watch?v=GNCd_ERZvZM">Good Jazz</a>, and <a href="https://youtu.be/EstPgi4eMe4">Avant-Garde Jazz</a>. One might interpret this jazz as being more on the Avant-Garde side of things. Experimental, perhaps. A bit like Cecil Taylor in slow motion, with literally perfect time.
+	<br><br>
+	<center><b>Tools in the App</b></center>
+	<br>
+In order to build Jazz Shot, I needed to get the R,G,B values of a bunch of colors. I need these values in order to create the initial values of my empty clusters for k-means clustering. To do that, I looked at color wheels online, and then found the correct R,G,B values <a href="http://www.tayloredmktg.com/rgb/#GRE">here</a>. Next, I needed to turn those colors into useful code. To do that, I found this <a href="http://uicolor.xyz/#/hex-to-ui">awesome color-format- translation website</a>.
+	<br><br>
+	<center><b>Design of the App</b></center>
+	<br>
+	<center>obj-c front-end iOS app -->> c algorithm for image analytics</center>
+	<br>
+	The obj-c front-end runs a user interface allowing the user to either capture or select a photo. The photo is parsed in obj-c and a file is output wherein the first line is: width height (in pixels), and every line after that is just r g b r g b r g b etc etc etc. That text file is read into the c script (jazzshot.c) and then processed.
+	<br><br>
+	<center><b>jazzshot.c</b></center>
+	<br>
+	I have two important structs:
+	<br>	
+</font></div>
+	
+	<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">// this is a pixel</span>
+typdef <span style="color: #008800; font-weight: bold">struct</span> pixel {
+   <span style="color: #333399; font-weight: bold">int</span> red;
+<span style="color: #333399; font-weight: bold">int</span> green;
+   <span style="color: #333399; font-weight: bold">int</span> blue;
+} <span style="color: #333399; font-weight: bold">pixel_t</span>;
+<span style="color: #888888">// this is an image</span>
+typdef <span style="color: #008800; font-weight: bold">struct</span> image {
+   <span style="color: #333399; font-weight: bold">int</span> height;
+<span style="color: #333399; font-weight: bold">int</span> width;
+   <span style="color: #333399; font-weight: bold">pixel_t</span> pixels[width][height];
+} <span style="color: #333399; font-weight: bold">image_t</span>;
+</pre></div>
+
+<div id="tutorial">
+<font face="Hiragino sans" color=#323232 size="4">
+	This is where we get to the cool stuff.
+	<br><br>
+	<center><b>PHILOSOPHY OF THE APP</b></center>
+	<br>
+	Jazz Shot turns an image into a musical composition. To do this, the composition of the image translates to the composition of the music. The colors of the image translate to the notes of the music.
+	<br><br>
+	<center><b>How to Translate Color Into Sound</b></center>
+	<br>
+	There are an infinity of possible translations of color into sound. Maybe a b# sounds like dark purple to you, but it sounds like olive green to me. I goofed around on Wikipedia for a while, and then after some googling (what academics call research), I stumbled upon <a href="http://www.flutopedia.com/sound_color.htm">this amazing website</a>. But having my app upload and download from that site would be far too much work. So I went down the rabbit hole of weird piano blogs, and found <a href="http://wagneric.com/audiocolors.html">this much simpler tool</a>:
+
+<table bgcolor=#CCCCCC align=center>
+<tr>
+<td align=right>
+<font face=courier>
+<font color=#FF0000>
+ F     --  349.228231 Hz ~ 383.980501 THz ~ 780.749171 nm <br>
+ F#    --  369.994423 Hz ~ 406.813170 THz ~ 736.929087 nm <br>
+ G     --  391.995436 Hz ~ 431.003540 THz ~ 695.568436 nm <br>
+ G#    --  415.304698 Hz ~ 456.632344 THz ~ 656.529179 nm <br>
+</font><font color=#FF7030>
+ A     --  440.000000 Hz ~ 483.785116 THz ~ 619.681028 nm <br>
+</font><font color=#FFFF00>
+ Bflat --  466.163762 Hz ~ 512.552476 THz ~ 584.901004 nm <br>
+</font><font color=#008000>
+ B     --  493.883301 Hz ~ 543.030432 THz ~ 552.073033 nm <br>
+ C     --  523.251131 Hz ~ 575.320702 THz ~ 521.087555 nm <br>
+</font><font color=#0040FF>
+ C#    --  554.365262 Hz ~ 609.531052 THz ~ 491.841158 nm <br>
+</font><font color=#0000FF>
+ D     --  587.329536 Hz ~ 645.775654 THz ~ 464.236235 nm <br>
+</font><font color=#800080>
+ Eflat --  622.253967 Hz ~ 684.175473 THz ~ 438.180657 nm <br>
+ E     --  659.255114 Hz ~ 724.858663 THz ~ 413.587466 nm <br>
+ F     --  698.456463 Hz ~ 767.961002 THz ~ 390.374586 nm <br>
+</font>
+</font>
+</td>
+</tr>
+</table>
+Using that mapping, I can now basically shift colors to their closest approximations on that chart and then generate the appropriate piano key notes (it is important to note (bad pun intended) that as piano notes are discrete, whereas colors are continuous, I must essentially “cast” the colors to their closest “integer” approximations, so to speak). But note that the above chart is in nm - and I’m using R,G,B. So the final translation comes out as:
+</font></div>
+
+<center>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l">RGB</th>
+    <th class="tg-yw4l">nm</th>
+    <th class="tg-yw4l">Color Name</th>
+    <th class="tg-yw4l">Note</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(97,0,0)</td>
+    <td class="tg-yw4l">780</td>
+    <td class="tg-yw4l">RED</td>
+    <td class="tg-yw4l">F</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(186,0,0)</td>
+    <td class="tg-yw4l">737</td>
+    <td class="tg-yw4l">LIGHT RED</td>
+    <td class="tg-yw4l">F#</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(255,0,0)</td>
+    <td class="tg-yw4l">695</td>
+    <td class="tg-yw4l">FIRE TRUCK RED</td>
+    <td class="tg-yw4l">G</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(255,0,0)</td>
+    <td class="tg-yw4l">695</td>
+    <td class="tg-yw4l">FIRE TRUCK RED</td>
+    <td class="tg-yw4l">G#</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(255,119,0)</td>
+    <td class="tg-yw4l">620</td>
+    <td class="tg-yw4l">LIGHT ORANGE</td>
+    <td class="tg-yw4l">A</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(255,239,0)</td>
+    <td class="tg-yw4l">585</td>
+    <td class="tg-yw4l">YELLOW</td>
+    <td class="tg-yw4l">B flat</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(169,255,0)</td>
+    <td class="tg-yw4l">552</td>
+    <td class="tg-yw4l">LIME GREEN</td>
+    <td class="tg-yw4l">B</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(58,255,0)</td>
+    <td class="tg-yw4l">521</td>
+    <td class="tg-yw4l">CRAYON GREEN</td>
+    <td class="tg-yw4l">C</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(0,255,234)</td>
+    <td class="tg-yw4l">492</td>
+    <td class="tg-yw4l">CYAN</td>
+    <td class="tg-yw4l">C#</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(0,142,255)</td>
+    <td class="tg-yw4l">464</td>
+    <td class="tg-yw4l">CRAYON BLUE</td>
+    <td class="tg-yw4l">D</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(17,0,255)</td>
+    <td class="tg-yw4l">438</td>
+    <td class="tg-yw4l">OCEAN BLUE</td>
+    <td class="tg-yw4l">E flat</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(120,0,233)</td>
+    <td class="tg-yw4l">414</td>
+    <td class="tg-yw4l">PURPLE</td>
+    <td class="tg-yw4l">E</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">(121,0,141)</td>
+    <td class="tg-yw4l">390</td>
+    <td class="tg-yw4l">ROYAL PURPLE</td>
+    <td class="tg-yw4l">F</td>
+  </tr>
+</table>
+</center>
+
+<div id="tutorial">
+<font face="Hiragino sans" color=#323232 size="4">
+(Made with <a href="http://www.tablesgenerator.com">this table making tool</a> and <a href="http://lsrtools.1apps.com/wavetorgb/">this awesome wavelength to color translator</a>)
+<br><br>
+<center><b>How to Translate Image Composition Into Musical Composition</b></center>
+The compositional elements of a photograph are debatable. For the purposes of Jazz Shot, I start by finding centroids of common colors using a <a href="https://en.wikipedia.org/wiki/K-means_clustering">k-means algorithm</a> in order to select which notes to play. But that begs the question: when should I play those notes? I use the X,Y location of the centroids of these common-color clusters to determine the location where the note begins, and I use the size (approximate width) of the color-cluster
+<br><br>   
+to determine how long the note should last for. But playing just one note would be boring, so instead I play a scale, starting with the note we selected based off of color. This means I need a way to select which scale pattern to use, and which rhythm to play this scale in.
+<br><br><center><i>Scales</i><center><br>
+Based off of a meta-survey of various non-academic sites online with dubious English-language skills and more than zero instances of classic clip- art, I get the impression that Jazz pianists tend to rely on the modal scales. Wikipedia, the world’s foremost bonafide source of 100% concrete truth, appears to back this up. According to that unquestionable bedrock of intelligencia, the most important modal jazz scales are the following:
+</font></div>
+
+<center>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l">I</th>
+    <th class="tg-yw4l">Ionian mode</th>
+    <th class="tg-yw4l">C D E F G A B C</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">II</td>
+    <td class="tg-yw4l">Dorian mode</td>
+    <td class="tg-yw4l">C D E♭F G A B♭ C</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">III</td>
+    <td class="tg-yw4l">Phrygian mode</td>
+    <td class="tg-yw4l">C D♭ E♭ F G A♭ B♭ C</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">IV</td>
+    <td class="tg-yw4l">Lydian mode</td>
+    <td class="tg-yw4l">C D E F# G A B C</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">V</td>
+    <td class="tg-yw4l">Mixolydian mode</td>
+    <td class="tg-yw4l">C D E F G A B♭C</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">VI</td>
+    <td class="tg-yw4l">Aeolian mode</td>
+    <td class="tg-yw4l">C D E♭F G A♭B♭C</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">VIIø</td>
+    <td class="tg-yw4l">Locrian mode</td>
+    <td class="tg-yw4l">C D♭E♭F G♭A♭B♭C</td>
+  </tr>
+</table>
+</center>
+
+<div id="tutorial">
+<font face="Hiragino sans" color=#323232 size="4">
+<footer><a href="https://en.wikipedia.org/wiki/Jazz_scale#Modes_of_the_major_scale">(SOURCE)</a></footer>
+<br>
+<br>
+I intuitively feel that the more flat/sharp the notes on a scale are, the more entropic the scale will feel. If I assign 1 point to every sharp note, and 2 points to every flat note, and map in descending order of points, I get the following:
+<lu>
+<li>Locrian mode: 10 points</li>
+<li>Phrygian mode: 8 points</li>
+<li>Aeolian mode: 6 points</li>
+<li>Doriam mode: 4 points</li>
+<li>Mixolydian mode: 2 points</li>
+<li>Lydrian mode: 1 point</li>
+<li>Ionian mode: 0 points</li>
+</lu>
+<br>
+Now I need to translate visual entropy into audible entropy. For each centroid, I will find the “distance” between each pixel in the centroid and the average color, and then I will find the average “distance.” I will calculate distance using the standard color distance formula:
+</font></div>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">Point1 has R1 G1 B1
+Point2 has R2 G2 B2
+<span style="color: #888888">// Distance between colors is</span>
+d<span style="color: #333333">=</span>sqrt( (r2<span style="color: #333333">-</span>r1)<span style="color: #333333">^</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">+</span> (g2<span style="color: #333333">-</span>g1)<span style="color: #333333">^</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">+</span> (b2<span style="color: #333333">-</span>b1)<span style="color: #333333">^</span><span style="color: #0000DD; font-weight: bold">2</span> )
+<span style="color: #888888">// Percentage is</span>
+p<span style="color: #333333">=</span>d<span style="color: #333333">/</span>sqrt( (<span style="color: #0000DD; font-weight: bold">255</span>)<span style="color: #333333">^</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">+</span> (<span style="color: #0000DD; font-weight: bold">255</span>)<span style="color: #333333">^</span><span style="color: #0000DD; font-weight: bold">2</span> <span style="color: #333333">+</span> (<span style="color: #0000DD; font-weight: bold">255</span>)<span style="color: #333333">^</span><span style="color: #0000DD; font-weight: bold">2</span> )
+</pre></div>
+
+<div id="tutorial">
+<font face="Hiragino sans" color=#323232 size="4">
+<footer><a href="http://stackoverflow.com/a/9018153/1586231">(SOURCE)</a></footer>
+<br>
+<br>
+I will then equate this average color “distance” to a metric of “entropy” (note that I am using some mathematical vocabulary quite loosely in this post. I am fully aware that distance, entropy, integer, cast, etc. really do not mean what I use them to articulate in this post. But a more technical vocabulary would be a) harder to write with and b) harder for people interested in this from a jazz rather than computer science background to understand).
+<lu>
+<li>0-5% “entropy” -> 0 “points” -> Ionian mode</li>
+<li>6-10% “entropy” -> 1 “point” -> Lydian mode</li>
+<li>11-15% “entropy” -> 2 “points” -> Mixolydian mode</li>
+<li>16-20% “entropy” -> 4 “points” -> Doriam mode</li>
+<li>21-25% “entropy” -> 6 “points” -> Aeolian mode</li>
+<li>26-30% “entropy” -> 8 “points” -> Phrygian mode</li>
+<li>31+% “entropy” -> 10 “points” -> Locrian mode (unlikely to occur)</li>
+</lu>
+<br>
+(Computer Science folks should note that I deliberately using only a single iteration of k-means clustering, so when I say “k-means clustering” I’m honestly using the term very loosely. I designed it this way in order to ensure a decent number of separate notes.)
+<br>
+<br>
+<center><i>Rhythm/Pattern</i></center>
+<br>
+I am not going to do anything too fancy with the rhythm/pattern. In fact, I am going to do almost nothing with it, because I think the more complexity I put into this thing, the less likely it is to ever produce anything even remotely listenable. So here is my rhythm algorithm:
+</font></div>
+
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #888888">// width of the centroid in %</span>
+W <span style="color: #333333">=</span> ( Width of Color Centroid ) <span style="color: #333333">/</span> ( Width of Image )
+<span style="color: #888888">// height of the centroid in %</span>
+H <span style="color: #333333">=</span> ( Height of Color Centroid ) <span style="color: #333333">/</span> ( Height of Image )
+<span style="color: #888888">// very rough estimation of average diameter of centroid in %</span>
+AV <span style="color: #333333">=</span> ( W <span style="color: #333333">+</span> H ) <span style="color: #333333">/</span> <span style="color: #0000DD; font-weight: bold">2</span>
+<span style="color: #888888">// length of pattern of notes, in quarter-notes, within a 16-bar</span>
+sequence
+L <span style="color: #333333">=</span> AV <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">4</span> <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">16</span>
+<span style="color: #888888">// distance from center of centroid to center of image</span>
+R <span style="color: #333333">=</span> distance from center of centroid to center of image
+RP <span style="color: #333333">=</span> R <span style="color: #333333">/</span> (Whichever is largest, width or height of image)
+<span style="color: #888888">// where in the 16-bar sequence the pattern begins</span>
+S <span style="color: #333333">=</span> RP <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">4</span> <span style="color: #333333">*</span> <span style="color: #0000DD; font-weight: bold">16</span>
+</pre></div>
+
+<div id="tutorial">
+<font face="Hiragino sans" color=#323232 size="4">
+<br>
+<br>
+<center><b>What’s Next?</b></center>
+<br>
+Over the coming 2 weeks I will be coding the c and obj-c components of Jazz Shot. As I progress, I will update this blog with open source code, explanations of my algorithms, and more music-oriented posts such as this
+one (featuring a lot of cool pictures and pseudocode and jokes about Wikipedia).
+<br>
+<br>
+<center><b>What is this?</b></center>
+<br>
+This is my final project for History of Jazz Since 1965 (SP16) at Dartmouth College, taught by Professor <a href="http://music.dartmouth.edu/people/donald-glasgo">Don Glasgo</a>, who didn’t hear me say I don’t like Cecil Taylor and who should please give me an A on this assignment.
+</font></div>
+
+</body>
+</html>
