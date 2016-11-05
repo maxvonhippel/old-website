@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Main</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Main</title>
+	<! --- scripts --->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+    <! --- styles --->
+    <style>
+		#bio {
+	    	margin-top: 10px;
+			margin-bottom: 10px;
+			margin-right: 100px;
+			margin-left: 100px;
+		}
+		
+		ol {
+	    	width: 70%;
+	    	margin: auto;
+		}
+		
+		path {
+		  stroke: #fff;
+		  fill-rule: evenodd;
+		}
+		
+		text {
+		  font-family: Arial, sans-serif;
+		  font-size: 12px;
+		}
+
+	</style>
 </head>
 <body>
 
-<center><h1>Hi!  I'm Max.</h1></center>
-<p>I'm a UWCCR '15 and BlackHat 2016 Student Scholar from Alaska.  I study pure mathematics and computer science at the University of Arizona Honors College in Tucson, and I'm interested in pure math, logic, data visualization, OpenStreetMaps, GIS, and security.  I also like writing pithy things on the internet, skateboarding, and street and landscape photography with my trusty Fujifilm X-Pro1.  This is my nifty website.</p>
+<center><font face="Hiragino sans" color=#464646 size="7">Hi!  I'm Max.</font></center>
+<div id="bio"><font face="Hiragino sans" color=#323232 size="4">I'm a UWCCR '15 and BlackHat 2016 Student Scholar from Alaska.  I study pure mathematics and computer science at the University of Arizona Honors College in Tucson, and I'm interested in pure math, logic, data visualization, OpenStreetMaps, GIS, and security.  I also like writing pithy things on the internet, skateboarding, and street and landscape photography with my trusty Fujifilm X-Pro1.  This is my nifty website.</font></div>
+
+<div id="chart"></div>
+<script type="text/javascript" src="scripts/daisy.js"></script>
 
 </body>
 </html>
