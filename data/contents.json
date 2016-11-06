@@ -1,6 +1,13 @@
 {
  "name": "Contents",
  "children": [
+	{
+		"name": "Essays",
+		"children": [
+			{"name": "Storm", "size": 2, "url": "blog posts/storm.html"},
+			{"name": "Francesca", "size": 2, "url": "blog posts/Ches.html"}
+		]	
+	},
   	{
 	   "name": "Coding",
 	   "children": [
