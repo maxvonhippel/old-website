@@ -38,8 +38,8 @@
 		     {
 		     	"name": "Abandoned",
 		     	"children": [
-			     	{"name": "3D-Scanning Myself", "size": 2, "url": "https://www.diplomaframe.com/contests/frame-my-future-scholarship-contest-2015/details.aspx?entryID=71901"},
-			     	{"name": "Whoa!  Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"},
+			     	{"name": "3D-Scanning", "size": 2, "url": "https://www.diplomaframe.com/contests/frame-my-future-scholarship-contest-2015/details.aspx?entryID=71901"},
+			     	{"name": "Whoa! Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"},
 			     	{"name": "Jazz Shot", "size": 2, "url": "/blog posts/jazzshot.html"}
 		     	]
 		     },
@@ -47,7 +47,7 @@
 			     "name": "In Progress",
 			     "children": [
 				     {"name": "Nepal OSM History", "size": 2, "url": "https://github.com/maxvonhippel/NepalOSMHistory"},
-				     {"name": "BlockChain Narrative Visualization", "size": 2, "url": "https://twitter.com/_m_vh/status/794556610781663232"},
+				     {"name": "BlockChain", "size": 2, "url": "https://twitter.com/_m_vh/status/794556610781663232"},
 				     {"name": "This Website", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"}
 			     ]
 			}
@@ -61,20 +61,25 @@
 		    	"children": [
 			    	{"name": "Road Trip", "size": 2},
 			    	{"name": "Nepal", "size": 2},
-			    	{"name": "500px Account", "size": 2, "url": "https://500px.com/maxvonhippel"}	
+			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}	
 			]
 		  },
 		  {
 			"name": "Pro",
 			"children": [
-				{"name": "Dartmouth IDOL", "size": 2, "url": "http://hopbackstage.org/2016/03/02/introducing-the-dartmouth-idol-2016-finalists/"},
-				{"name": "Dartmouth Barbary Coast", "size": 2, "url": "http://hopbackstage.org/2016/05/13/viral-worthy-videos-from-the-coast/"},
-				{"name": "Dartmouth Glee Club", "size": 2, "url": "http://hopbackstage.org/2016/04/26/sara-sitzer-on-rachmaninoffs-all-night-vigil/"},
-				{"name": "Dartmouth Collaborative Choreography", "size": 2, "url": "http://hopbackstage.org/2016/04/05/collaborative-choreography-at-collis-cabaret/"},
-				{"name": "Dartmouth Music & Pie", "size": 2, "url": "http://hopbackstage.org/2016/03/07/music-and-pie-of-course/"},
-				{"name": "Dartmouth Piano Master Class", "size": 2, "url": "http://hopbackstage.org/2016/01/29/whats-in-a-masterclass/"},
-				{"name": "Dartmouth Shakespeare & Pizza", "size": 2, "url": "http://hopbackstage.org/2016/01/18/shakespeare-doesnt-only-go-with-pizza/"},
-				{"name": "Dartmouth Production of Chicago", "size": 2, "url": "http://www.vnews.com/Archives/2016/02/Highlights-dc-vn-022516"}
+				{
+					"name": "Dartmouth",
+					"children": [
+						{"name": "IDOL", "size": 2, "url": "http://hopbackstage.org/2016/03/02/introducing-the-dartmouth-idol-2016-finalists/"},
+						{"name": "Barbary Coast", "size": 2, "url": "http://hopbackstage.org/2016/05/13/viral-worthy-videos-from-the-coast/"},
+						{"name": "Glee Club", "size": 2, "url": "http://hopbackstage.org/2016/04/26/sara-sitzer-on-rachmaninoffs-all-night-vigil/"},
+						{"name": "Choreography", "size": 2, "url": "http://hopbackstage.org/2016/04/05/collaborative-choreography-at-collis-cabaret/"},
+						{"name": "Music & Pie", "size": 2, "url": "http://hopbackstage.org/2016/03/07/music-and-pie-of-course/"},
+						{"name": "Piano Class", "size": 2, "url": "http://hopbackstage.org/2016/01/29/whats-in-a-masterclass/"},
+						{"name": "Shakespeare", "size": 2, "url": "http://hopbackstage.org/2016/01/18/shakespeare-doesnt-only-go-with-pizza/"},
+						{"name": "Chicago", "size": 2, "url": "http://www.vnews.com/Archives/2016/02/Highlights-dc-vn-022516"}
+					]
+				}
 			]  
 		  }   
 	    ]
@@ -112,21 +117,31 @@
     {
 	    "name": "Press, etc.",
 	    "children": [
-		    {"name": "Infinity Dental", "size": 2, "url": "https://www.infinitydentalweb.com/scholarship-winners.html"},
-		    {"name": "Davis UWC Award", "size": 2, "url": "http://www.davisuwcscholars.org/scholars/class-of-2019/v/node/12685"},
-		    {"name": "Dickey Center Quake Summit", "size": 2, "url": "http://dickey.dartmouth.edu/global-engagement/conferences-initiatives/nepal-earthquake-summit"},
-		    {"name": "Featured in The Dartmouth D", "size": 2, "url": "http://www.thedartmouth.com/article/2015/10/an-eye-for-innovation/"},
-		    {"name": "Featured in The Dartmouth D (1996)", "size": 2, "url": "http://www.dartmouth.org/classes/89/Newsletters/1997%20March.htm"},
-		    {"name": "My Second Moment In The Media Spotlight, in 2002!", "size": 2, "url": "http://www.pitt.edu/~atsea/atsea.html"},
-		    {"name": "My ZipLine Video Mentioned By The Hotel", "size": 2, "url": "http://atitlanreserva.com/wp/en/2015/08/11/ziptrek-footage/"},
-		    {"name": "Got Advice From Marc Andreesen Through Twitter", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"}
+		    {
+			"name": "Awards",
+			"children": [
+				{"name": "Infinity Dental", "size": 2, "url": "https://www.infinitydentalweb.com/scholarship-winners.html"},
+				{"name": "Davis UWC", "size": 2, "url": "http://www.davisuwcscholars.org/scholars/class-of-2019/v/node/12685"}
+			]    
+		    },
+		    {"name": "Quake Summit", "size": 2, "url": "http://dickey.dartmouth.edu/global-engagement/conferences-initiatives/nepal-earthquake-summit"},
+		    {
+			    "name": "The D",
+			    "children": [
+				    {"name": "2016", "size": 2, "url": "http://www.thedartmouth.com/article/2015/10/an-eye-for-innovation/"},
+		    {"name": "1996", "size": 2, "url": "http://www.dartmouth.org/classes/89/Newsletters/1997%20March.htm"}
+			    ]
+		    },
+		    {"name": "2002!", "size": 2, "url": "http://www.pitt.edu/~atsea/atsea.html"},
+		    {"name": "ZipLine", "size": 2, "url": "http://atitlanreserva.com/wp/en/2015/08/11/ziptrek-footage/"},
+		    {"name": "Andreesen", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"}
 	    ]
     },
     {
-	    "name": "Memberships",
+	    "name": "Boards",
 	    "children": [
 		    {"name": "UWC GO", "size": 2, "url": "http://www.uwcgo.org/about"},
-		    {"name": "Kathmandu Living Labs, Sep-Dec 2016", "size": 2, "url": "http://www.kathmandulivinglabs.org/team"}
+		    {"name": "KLL 9-12 '16", "size": 2, "url": "http://www.kathmandulivinglabs.org/team"}
 	    ]
     }
  ]
