@@ -36,7 +36,14 @@
 			     	{"name": "Jazz Shot", "size": 2, "url": "/blog posts/jazzshot.html"}
 		     	]
 		     },
-		     {"name": "In Progress", "size": 2}
+		     {
+			     "name": "In Progress",
+			     "children": [
+				     {"name": "Nepal OSM History", "size": 2, "url": "https://github.com/maxvonhippel/NepalOSMHistory"},
+				     {"name": "BlockChain Narrative Visualization", "size": 2, "url": "https://twitter.com/_m_vh/status/794556610781663232"},
+				     {"name": "This Website", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"}
+			     ]
+			}
 	    ]
     },
     {
@@ -109,7 +116,7 @@
 	    ]
     },
     {
-	    "name": "Boards & Bureaucracies",
+	    "name": "Memberships",
 	    "children": [
 		    {"name": "UWC GO", "size": 2, "url": "http://www.uwcgo.org/about"},
 		    {"name": "Kathmandu Living Labs, Sep-Dec 2016", "size": 2, "url": "http://www.kathmandulivinglabs.org/team"}
