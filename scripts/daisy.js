@@ -40,6 +40,7 @@ d3.json("data/contents.json", function(error, root) {
     .attr("x", function(d) { return y(d.y); })
     .attr("dx", "6") // margin
     .attr("dy", ".35em") // vertical-align
+    .on("click", click)
     .text(function(d) { return d.name; });
 
   function click(d) {
