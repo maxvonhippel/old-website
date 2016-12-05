@@ -6,7 +6,7 @@
 		"children": [
 			{"name": "Storm", "size": 2, "url": "blog posts/storm.html"},
 			{"name": "Francesca", "size": 2, "url": "blog posts/Ches.html"}
-		]	
+		]
 	},
   	{
 	   "name": "Coding",
@@ -47,6 +47,7 @@
 			     "name": "In Progress",
 			     "children": [
 				     {"name": "Nepal OSM History", "size": 2, "url": "https://github.com/maxvonhippel/NepalOSMHistory"},
+				     {"name": "OSM History Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
 				     {"name": "BlockChain", "size": 2, "url": "https://twitter.com/_m_vh/status/794556610781663232"},
 				     {"name": "This Website", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"}
 			     ]
@@ -61,7 +62,7 @@
 		    	"children": [
 			    	{"name": "Road Trip", "size": 2},
 			    	{"name": "Nepal", "size": 2},
-			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}	
+			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}
 			]
 		  },
 		  {
@@ -80,8 +81,8 @@
 						{"name": "Chicago", "size": 2, "url": "http://www.vnews.com/Archives/2016/02/Highlights-dc-vn-022516"}
 					]
 				}
-			]  
-		  }   
+			]
+		  }
 	    ]
     },
     {
@@ -94,7 +95,7 @@
 			    	]
 			    },
 			    {
-			    	"name": "Philosophy", 
+			    	"name": "Philosophy",
 			    	"children": [
 				    	{"name": "HipHopNietzsche", "size": 2, "url": "https://twitter.com/HiphopNietzsche"}
 			    	]
@@ -122,7 +123,7 @@
 			"children": [
 				{"name": "Infinity Dental", "size": 2, "url": "https://www.infinitydentalweb.com/scholarship-winners.html"},
 				{"name": "Davis UWC", "size": 2, "url": "http://www.davisuwcscholars.org/scholars/class-of-2019/v/node/12685"}
-			]    
+			]
 		    },
 		    {"name": "Quake Summit", "size": 2, "url": "http://dickey.dartmouth.edu/global-engagement/conferences-initiatives/nepal-earthquake-summit"},
 		    {
