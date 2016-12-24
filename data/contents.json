@@ -16,6 +16,11 @@
 		      "children": [
 			      {"name": "Ratchet Amazon", "size": 2, "url": "https://github.com/maxvonhippel/Amazon-Mobile-Kit"},
 			      {"name": "JSON PruneCluster", "size": 2, "url": "https://github.com/maxvonhippel/PruneCluster"},
+			      {"name": "Grandpa's Wesbite", "size": 2, "url": "http://mxvh.pl/ArndtvonHippel/"},
+			      {"name": "Nepal OSM History", "size": 2, "url": "https://github.com/maxvonhippel/NepalOSMHistory"},
+				  {"name": "OSM History Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
+				  {"name": "This", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"},
+				  {"name": "Empty Staticmaps", "size": 2, "url": "https://github.com/maxvonhippel/staticmap"},
 			      {
 				      "name": "iOS",
 				      "children": [
@@ -46,10 +51,8 @@
 		     {
 			     "name": "In Progress",
 			     "children": [
-				     {"name": "Nepal OSM History", "size": 2, "url": "https://github.com/maxvonhippel/NepalOSMHistory"},
-				     {"name": "OSM History Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
-				     {"name": "BlockChain", "size": 2, "url": "https://twitter.com/_m_vh/status/794556610781663232"},
-				     {"name": "This Website", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"}
+				     {"name": "BASE9", "size": 2, "url": "https://github.com/maxvonhippel/base"},
+				     {"name": "OSM2GIF", "size": 2, "url": "https://github.com/maxvonhippel/osm2gif"}
 			     ]
 			}
 	    ]
