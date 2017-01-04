@@ -63,9 +63,9 @@
 		 {
 		    	"name": "Blogging",
 		    	"children": [
-			    	{"name": "Road Trip", "size": 2},
-			    	{"name": "Nepal", "size": 2},
-			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}
+			    	{"name": "Road Trip", "size": 2, "url": "https://www.youtube.com/watch?v=KNNi-QfdJtE&t=184s"},
+			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"},
+			    	{"name": "Best Of", "size": 2, "url": "/blog posts/photography.html"}
 			]
 		  },
 		  {
