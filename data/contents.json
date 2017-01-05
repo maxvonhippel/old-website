@@ -63,7 +63,7 @@
 		 {
 		    	"name": "Blogging",
 		    	"children": [
-			    	{"name": "Road Trip", "size": 2, "url": "https://www.youtube.com/watch?v=KNNi-QfdJtE&t=184s"},
+			    	{"name": "Road Trip", "size": 2, "url": "/blog posts/roadtrip.html"},
 			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"},
 			    	{"name": "Best Of", "size": 2, "url": "/blog posts/photography.html"}
 			]
