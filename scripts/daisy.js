@@ -1,5 +1,5 @@
 var width = 960,
-    height = 700,
+    height = 1000,
     radius = Math.min(width, height) / 2;
 
 var x = d3.scale.linear()
@@ -65,7 +65,7 @@ d3.json("data/contents.json", function(error, root) {
 	        }
 	});
   }
-  
+
 });
 
 d3.select(self.frameElement).style("height", height + "px");
