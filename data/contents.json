@@ -52,7 +52,9 @@
 			     "name": "In Progress",
 			     "children": [
 				     {"name": "BASE9", "size": 2, "url": "https://github.com/maxvonhippel/base"},
-				     {"name": "OSM2GIF", "size": 2, "url": "https://github.com/maxvonhippel/osm2gif"}
+				     {"name": "OSM2GIF", "size": 2, "url": "https://github.com/maxvonhippel/osm2gif"},
+				     {"name": "QIIME2", "size": 2, "url": "https://github.com/qiime2"},
+				     {"name": "bluster", "size": 2, "url": "https://github.com/maxvonhippel/bluster"}
 			     ]
 			}
 	    ]
