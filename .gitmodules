@@ -1,0 +1,3 @@
+[submodule "blog posts/PruneCluster"]
+	path = blog posts/PruneCluster
+	url = https://github.com/SINTEF-9012/PruneCluster.git

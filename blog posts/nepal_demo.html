@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+	<!--papa parse-->
+	<script src="js/papaparse.min.js"></script>
+	<!--- dygraphs-->
+	<script src="js/dygraph-combined.js"></script>
+	<!--jquery-->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.csv.min.js"></script>
+	<script src="js/jquery.ajax-cross-origin.min.js"></script>
+	<!--css-->
+	<link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet"/>
+	<link href="css/styles.css" rel="stylesheet"/>
+	<!--Leaflet-->
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+	<script src="js/BoundaryCanvas.js"></script>
+	<script src="data/nepal-border.js"></script>
+	<!--PruneCluster-->
+	<script src="PruneCluster/dist/PruneCluster.js"></script>
+</head>
+<body>
+
+	<div class="title">
+		<h1 id="pageTitle" class="pageTitle">
+			<span id="titleOpenStreetMap">OpenStreetMap</span>
+			<span id="titleStatisticsTool">Nepal Statistics</span>
+		</h1>
+		<!--- progress bar -->
+		<div id="myProgress">
+			<div id="myBar"></div>
+		</div>
+		<!--- End of progress bar -->
+	</div>
+
+	<div class="w3-row w3-center">
+		<!-- holds map, chart, nepal statistics and selected statistics -->
+		<div id="#mapchartbox" class="w4-border w4-border-blue-grey w4-col l9 s12 w4-display-container">
+			<div id="mapid" class="w4-border w4-col l9 s10" style="position:relative">
+				<!--- Legend of Slider -->
+				<div id="dy_legend">
+					<span id="newFeatures">New Features</span><br>
+					<span id="editedFeatures">Edited Features</span>
+				</div>
+			</div>
+			<!--- end of map -->
+			<!--- start of chart -->
+			<div id="chart" class="w3-border w3-col l9 s12 chartposition"></div>
+			<!--- end of chart -->
+			<!--demo script-->
+			<script src="js/demo_map_and_chart.js"></script>
+		</div>
+	</div>
+
+</body>
+</html>
+

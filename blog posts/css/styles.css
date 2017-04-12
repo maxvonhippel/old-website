@@ -1,0 +1,220 @@
+@import url('../PruneCluster/dist/LeafletStyleSheet.css');
+
+#myProgress {
+	position: relative;
+	width: 100%;
+	height: 4px;
+	background-color: #128e9c;
+	width: 100%;
+	margin-top: auto;
+	margin-top:56px;
+
+	/* background-color: #16B2C4; #06606A #0D6F7A #19A5A5
+	height: 4px;
+	width: 100%;
+	margin-top: auto;
+	margin-top:57px; */
+	position: absolute;
+	z-index:5000;
+}
+
+#myBar {
+	/* position: absolute;
+	width: 1%;
+	height: 100%;
+	background-color: red;
+	border-right: 0.001em solid rgba(255, 255, 255, 0.9);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#15A6B7), color-stop(100%,#0DCEAD)); */
+	background: linear-gradient(#CC6633,#FF7C33,#CC6633); /*(#d25c4e,#ff884d,#d25c4e ) (#a7a9ac,#fff,#bcbec0 ) #ff988d*/
+	/* border-right: 4px solid rgb(255, 136, 77); */
+	height: 100%;
+	width: 1%;
+}
+
+body, table{
+	color:#47525e;
+	background-color:#EAF2F5;
+
+}
+
+h1.pageTitle{
+	text-align: center;
+	display: inline-block;
+	margin: 0;
+	/* padding-right: 40px; */
+	font-size: 28px;
+	line-height: 52px;
+	vertical-align: text-bottom;
+	font-weight: normal;
+	color: white;
+	box-shadow: 0px 2px 3px rgba(0,0,0, 0.5);
+	background-color: #15A6B7; /*rgba(119,164,178, 1)*/
+	width: 100%;
+	position:absolute;
+	z-index:5000;
+	overflow:hidden;
+	height:60px;
+	/* height:57px;  */
+}
+
+#mapchartbox{
+	min-height:640px;
+}
+
+#mapid{
+	min-height:520px;
+	width:100%;
+	margin-top: 50px;
+	background-color:#EAF2F5; /*rgba(225, 237, 241, 0.72) #D9ECF2; */ /*rgba(48, 68, 97, 0.13)*/
+	position:relative;
+}
+
+#chart{
+	min-height:120px;
+	width:100%;
+}
+
+
+h2.sectionTitle{
+	text-align:center;
+	display: inline-block;
+	margin-top: 3%;
+	/* padding-right: 40px;  */
+	font-size: 21px;
+	line-height: 57px;
+	vertical-align: text-bottom;
+	font-weight: normal;
+	color: white;
+	box-shadow: 0px 2px 3px rgba(0,0,0, 0.5);
+	background-color: #09B0A5 ; /* #0BB094 #0DCEAD, rgba(119,164,178, 1)*/
+	width: 100%;
+	/* position:absolute; z-index:5000; */
+	overflow:hidden;
+	height:57px;
+
+}
+
+table .left{
+	text-align:left !important;
+
+}
+
+table .center{
+	text-align:center !important;
+}
+
+table .right{
+	text-align:right !important;
+	padding-right: 16px;
+
+}
+
+tr .highlighted{
+	color:white !important;
+}
+
+th.th_left{
+	text-align:left !important;
+	padding-left: 16px;
+	font-family: testFonts;
+	color:#002D3F;
+}
+
+th.th_right{
+	text-align:right !important;
+	padding-right: 16px;
+	font-family: testFonts;
+	color:#002D3F;
+}
+
+th.th_center{
+	text-align:center !important;
+	font-family: testFonts;
+	color:#002D3F;
+}
+
+table.center{
+	margin-right:auto;
+	margin-left:auto;
+	float:none;
+}
+
+div#block-everything{
+	opacity:0.6;
+	position:fixed;
+	z-index:99000;
+	height:100%;
+	width:100%;
+	display:none;
+	background-color:#eaeab3;
+}
+
+div#glassy-effect{
+	/*opacity:1;*/
+	position:fixed;
+	z-index:98000;
+	height:100%;
+	width:100%;
+}
+
+#titleOpenStreetMap{
+	color:white;
+	font-family:regular;
+/*	margin:0px 0px 10px 30px; */
+	letter-spacing:0.5px;
+}
+
+#titleStatisticsTool{
+	color:white;
+	overflow:hidden;
+	font-family:testFont;
+	margin:0px 0px 0px 0px;
+	letter-spacing:-1px;
+}
+
+#sectionOpenStreetMap{
+	color: white;
+	font-family:regular;
+	letter-spacing:0.5px;
+}
+
+#sectionLeaderboards{
+	overflow:hidden;
+	font-family:testFont;
+	margin:0px 0px 0px 0px;
+	letter-spacing:-1px
+	padding-bottom:2px;
+	/* border-bottom: 2px solid #fc721b; */
+
+}
+
+#tblNepalStatistics{
+	line-height:10px;
+}
+
+hr.style-one {
+	margin:0px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+#dy_legend{
+	letter-spacing:0.2px;
+	font-size:15px;
+	background-color:rgba(234, 242, 245,.90);
+	display: inline;
+	padding:4px 6px 4px 6px ;
+	width:192px;
+	min-height:74px;
+	text-align:left;
+	font-family: testFonts;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	z-index:10000;
+	border-top: 1px solid rgba(180, 184, 185, 0.96);
+	border-left: 1px solid rgba(180, 184, 185, 0.96);
+
+}
