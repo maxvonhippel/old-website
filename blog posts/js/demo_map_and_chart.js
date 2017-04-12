@@ -45,8 +45,8 @@ searchText="";
 // update variables
 // current width out of 100 of the progress bar
 var width = 1;
-// one one hundredth of the total number of nodes we will parse, approximately
-var hundredth = 200000;
+// one one hundredth of the total number of nodes we will parse
+var hundredth = 100;
 var map_built = false;
 
 var markers = [];
@@ -248,47 +248,27 @@ function filter_map(start, end) {
 	// get current zoom bounds
 	var zoom = map.getBounds();
 	// init local vars
-	var hash = {};
 	var num = 0;
-	var markers_to_do = markers;
 
-	markers_to_do.forEach(function(m) {
+	markers.forEach(function(m) {
 		++num;
-		var wei = 0;
-		var pos = m.position;
-		var cver = 0;
-		while (true) {
-			try {
+		try {
 
-				verdate = m.data.versions[cver][1];
-				var inzoom = (zoom._southWest.lat <= m.position.lat && zoom._southWest.lng <= m.position.lng && zoom._northEast.lat >= m.position.lat && zoom._northEast.lng >= m.position.lng);
-				if (verdate.getDate() >= start.getDate() && verdate.getDate() <= end.getDate() && inzoom) {
-					++wei;
-					hash[veruser] += 1;
-				}
-				veruser = m.data.versions[++cver][0];
-			} catch (err) { break; }
-		}
+			verdate = m.data.versions[0][1];
+			var inzoom = (zoom._southWest.lat <= m.position.lat && zoom._southWest.lng <= m.position.lng && zoom._northEast.lat >= m.position.lat && zoom._northEast.lng >= m.position.lng);
+			if (verdate.getDate() >= start.getDate() && verdate.getDate() <= end.getDate() && inzoom) {
+				m.weight = 1;
+				m.filtered = false;
+			} else {
+				m.weight = 0;
+				m.filtered = true;
+			}
 
-		m.weight = wei;
-		if (m.weight == 0) {
-			m.filtered = true;
-		} else m.filtered = false;
+		} catch (err) { console.log(err); }
+
 	});
 	// process changes
 	leafletView.ProcessView();
-	// leaderboards calculation
-	var keys = [];
-	for(var key in hash)  {
-		keys.push(key);
-	}
-	var r = keys.sort(function(a,b){ return hash[a] - hash[b]} );
-	var ret = new Array(5);
-	for (var q = 0; q < 5 && q < r.length; q++) {
-		ret[r[q]] = this.hash[r[q]];
-	}
-	var place = 0;
-
 }
 
 /* --------- dychart stuff --------- */
