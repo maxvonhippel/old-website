@@ -46,7 +46,7 @@ searchText="";
 // current width out of 100 of the progress bar
 var width = 1;
 // one one hundredth of the total number of nodes we will parse
-var hundredth = 100;
+var hundredth =  1000;
 var map_built = false;
 
 var markers = [];
@@ -134,7 +134,6 @@ function handlenodes(data) {
 
 			console.log("All done parsing nodes for map from csv!");
 			console.log("size of markers array: ", markers.length);
-			console.log("size of markers_lite array: ", markers.length);
 			// remove progress bar
 			bar.style.visibility = 'hidden'
 			prog.style.visibility = 'hidden'
@@ -176,7 +175,7 @@ function parseresponse(c) {
 				console.log("incrementing the progress bar");
 				move();
 			}
-			versions.push([Object.freeze(name.toString()), Object.freeze(new Date(stamp.toString()))]);
+			versions.push([Object.freeze(name.toString()), Object.freeze(new Date(stamp.toString().slice(0, -1)))]);
 
 		});
 		// do we have a legit node to add now?
@@ -247,21 +246,20 @@ function filter_map(start, end) {
 
 	// get current zoom bounds
 	var zoom = map.getBounds();
-	// init local vars
-	var num = 0;
 
-	markers.forEach(function(m) {
-		++num;
+	for (let m of markers) {
+
 		try {
 
 			verdate = m.data.versions[0][1];
 			var inzoom = (zoom._southWest.lat <= m.position.lat && zoom._southWest.lng <= m.position.lng && zoom._northEast.lat >= m.position.lat && zoom._northEast.lng >= m.position.lng);
-			m.filtered = !(verdate.getDate() >= start.getDate() && verdate.getDate() <= end.getDate() && inzoom);
+			var filtered = !(verdate.getDate() >= start.getDate() && verdate.getDate() <= end.getDate() && inzoom);
+			m.filtered = filtered;
 
 		} catch (err) { console.log(err); }
 		//leafletView.ProcessView();
 
-	});
+	}
 	// process changes
 	leafletView.ProcessView();
 }
