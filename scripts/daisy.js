@@ -13,7 +13,7 @@ var color = d3.scale.category20c();
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height)
-  .append("g")
+	.append("g")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ")");
 
 var partition = d3.layout.partition()
@@ -56,12 +56,13 @@ d3.json("data/contents.json", function(error, root) {
 	.each("end", function(e, i) {
 	        // check if the animated element's data e lies within the visible angle span given in d
 	        if (e.x >= d.x && e.x < (d.x + d.dx)) {
-			var arcText = d3.select(this.parentNode).select("text");
-			// fade in the text element and recalculate positions
-			arcText.transition().duration(750)
-			.attr("opacity", 1)
-			.attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
-			.attr("x", function(d) { return y(d.y); });
+
+				var arcText = d3.select(this.parentNode).select("text");
+				// fade in the text element and recalculate positions
+				arcText.transition().duration(750)
+				.attr("opacity", 1)
+				.attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
+				.attr("x", function(d) { return y(d.y); });
 	        }
 	});
   }

@@ -15,7 +15,7 @@ var isRingBbox = function (ring, bbox) {
 
         sumX += ring[p].x;
         sumY += ring[p].y;
-        
+
         //bins[Number(ring[p].x === bbox.min.x) + 2 * Number(ring[p].y === bbox.min.y)] = 1;
     }
 
@@ -51,10 +51,10 @@ var ExtendMethods = {
             }
             res.push(mercComponent);
         }
-        
+
         return res;
     },
-    
+
     //lazy calculation of layer's boundary in map's projection. Bounding box is also calculated
     _getOriginalMercBoundary: function () {
         if (this._mercBoundary) {
@@ -62,7 +62,7 @@ var ExtendMethods = {
         }
 
         var compomentBbox;
-            
+
         if (L.Util.isArray(this.options.boundary)) { //Depricated: just array of coordinates
             this._mercBoundary = this._toMercGeometry(this.options.boundary);
         } else { //GeoJSON
@@ -82,7 +82,7 @@ var ExtendMethods = {
             }.bind(this);
             processGeoJSONObject(this.options.boundary);
         }
-        
+
         this._mercBbox = new L.Bounds();
         for (c = 0; c < this._mercBoundary.length; c++) {
             compomentBbox = new L.Bounds(this._mercBoundary[c][0]);
@@ -99,7 +99,7 @@ var ExtendMethods = {
             clippedExternalRing,
             clippedHoleRing,
             iC, iR;
-            
+
         for (iC = 0; iC < geom.length; iC++) {
             clippedComponent = [];
             clippedExternalRing = L.PolyUtil.clipPolygon(geom[iC][0], bounds);
@@ -117,7 +117,7 @@ var ExtendMethods = {
             }
             clippedGeom.push(clippedComponent);
         }
-        
+
         if (clippedGeom.length === 0) { //we are outside of all multipolygon components
             return {isOut: true};
         }
@@ -146,15 +146,15 @@ var ExtendMethods = {
 
     // Calculates intersection of original boundary geometry and tile boundary.
     // Uses quadtree as cache to speed-up intersection.
-    // Return 
-    //   {isOut: true} if no intersection,  
+    // Return
+    //   {isOut: true} if no intersection,
     //   {isIn: true} if tile is fully inside layer's boundary
     //   {geometry: <LatLng[][][]>} otherwise
     _getTileGeometry: function (x, y, z, skipIntersectionCheck) {
         if ( !this.options.boundary) {
             return {isIn: true};
         }
-    
+
         var cacheID = x + ":" + y + ":" + z,
             zCoeff = Math.pow(2, z),
             parentState,
@@ -183,7 +183,7 @@ var ExtendMethods = {
         if (parentState.isOut || parentState.isIn) {
             return parentState;
         }
-        
+
         cache[cacheID] = this._getClippedGeometry(parentState.geometry, tileBbox);
         return cache[cacheID];
     },
@@ -204,7 +204,7 @@ var ExtendMethods = {
             ctx = canvas.getContext('2d'),
             imageObj = new Image(),
             _this = this;
-            
+
         var setPattern = function () {
             var c, r, p,
                 pattern,
@@ -236,32 +236,32 @@ var ExtendMethods = {
             ctx.fill();
             callback();
         };
-        
+
         if (this.options.crossOrigin) {
             imageObj.crossOrigin = '';
         }
-        
+
         imageObj.onload = function () {
             //TODO: implement correct image loading cancelation
             canvas.complete = true; //HACK: emulate HTMLImageElement property to make happy L.TileLayer
             setTimeout(setPattern, 0); //IE9 bug - black tiles appear randomly if call setPattern() without timeout
         }
-        
+
         imageObj.src = url;
     },
-    
+
     onAdd: function(map) {
         (L.TileLayer.Canvas || L.TileLayer).prototype.onAdd.call(this, map);
-        
+
         if (this.options.trackAttribution) {
             map.on('moveend', this._updateAttribution, this);
             this._updateAttribution();
         }
     },
-    
+
     onRemove: function(map) {
         (L.TileLayer.Canvas || L.TileLayer).prototype.onRemove.call(this, map);
-        
+
         if (this.options.trackAttribution) {
             map.off('moveend', this._updateAttribution, this);
             if (!this._attributionRemoved) {
@@ -270,13 +270,13 @@ var ExtendMethods = {
             }
         }
     },
-    
+
     _updateAttribution: function() {
         var geom = this._getOriginalMercBoundary(),
             mapBounds = this._map.getBounds(),
             mercBounds = L.bounds(this._map.project(mapBounds.getSouthWest(), 0), this._map.project(mapBounds.getNorthEast(), 0)),
             state = this._getClippedGeometry(geom, mercBounds);
-        
+
         if (this._attributionRemoved !== !!state.isOut) {
             var attribution = L.TileLayer.BoundaryCanvas.prototype.getAttribution.call(this);
             this._map.attributionControl[state.isOut ? 'removeAttribution' : 'addAttribution'](attribution);
@@ -302,7 +302,7 @@ if (L.version >= '0.8') {
             this._boundaryCache = {}; //cache index "x:y:z"
             this._mercBoundary = null;
             this._mercBbox = null;
-            
+
             if (this.options.trackAttribution) {
                 this._attributionRemoved = true;
                 this.getAttribution = null;
@@ -336,13 +336,13 @@ if (L.version >= '0.8') {
             this._boundaryCache = {}; //cache index "x:y:z"
             this._mercBoundary = null;
             this._mercBbox = null;
-            
+
             if (this.options.trackAttribution) {
                 this._attributionRemoved = true;
                 this.getAttribution = null;
             }
         },
-        
+
         drawTile: function(canvas, tilePoint) {
             var adjustedTilePoint = L.extend({}, tilePoint),
                 url;
