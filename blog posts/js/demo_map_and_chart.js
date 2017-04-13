@@ -256,15 +256,10 @@ function filter_map(start, end) {
 
 			verdate = m.data.versions[0][1];
 			var inzoom = (zoom._southWest.lat <= m.position.lat && zoom._southWest.lng <= m.position.lng && zoom._northEast.lat >= m.position.lat && zoom._northEast.lng >= m.position.lng);
-			if (verdate.getDate() >= start.getDate() && verdate.getDate() <= end.getDate() && inzoom) {
-				m.weight = 1;
-				m.filtered = false;
-			} else {
-				m.weight = 0;
-				m.filtered = true;
-			}
+			m.filtered = !(verdate.getDate() >= start.getDate() && verdate.getDate() <= end.getDate() && inzoom);
 
 		} catch (err) { console.log(err); }
+		//leafletView.ProcessView();
 
 	});
 	// process changes
@@ -335,7 +330,5 @@ $(document).ready(function () {
 	fillmap();
 	leafletView.ProcessView();
 	map.addLayer(leafletView);
-    // trigger any date range update
-	self.filter_map(gStartTime, gEndTime);
 
 });
