@@ -164,30 +164,6 @@ div#glassy-effect{
 	letter-spacing:0.5px;
 }
 
-#titleStatisticsTool{
-	color:white;
-	overflow:hidden;
-	font-family:testFont;
-	margin:0px 0px 0px 0px;
-	letter-spacing:-1px;
-}
-
-#sectionOpenStreetMap{
-	color: white;
-	font-family:regular;
-	letter-spacing:0.5px;
-}
-
-#sectionLeaderboards{
-	overflow:hidden;
-	font-family:testFont;
-	margin:0px 0px 0px 0px;
-	letter-spacing:-1px
-	padding-bottom:2px;
-	/* border-bottom: 2px solid #fc721b; */
-
-}
-
 #tblNepalStatistics{
 	line-height:10px;
 }
@@ -217,76 +193,4 @@ hr.style-one {
 	border-top: 1px solid rgba(180, 184, 185, 0.96);
 	border-left: 1px solid rgba(180, 184, 185, 0.96);
 
-}
-
-.date {
-  font-size: small;
-  font-style: italic;
-  margin: 0;
-  width: 100%;
-  border-top: solid #eee 1px;
-}
-
-.breadcrumbs {
-  font-size: small;
-  font-family: sans-serif;
-  width: 100%;
-  margin: 0;
-  padding-top: 3px;
-  font-style: italic;
-  border-bottom: solid #eee 1px;
-  color: #999;
-}
-
-a {
-  color: steelblue;
-}
-
-a:not(:hover) {
-  text-decoration: none;
-}
-
-body {
-  margin: 0 auto;
-  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
-  line-height: 1.5em;
-  color: #333;
-  background: #fefefe;
-  width: 960px;
-  position: relative;
-}
-
-p {
-  width: 720px;
-}
-
-h1, h2, h3 {
-  font-weight: 300;
-  text-rendering: optimizeLegibility;
-}
-
-h1 {
-  font-size: 2.5em;
-}
-
-aside {
-  font-size: small;
-  position: absolute;
-  right: 0;
-  width: 180px;
-}
-
-aside p {
-  width: auto;
-}
-
-p.cite, p.caption {
-  color: #666;
-}
-
-p.caption {
-  text-align: center;
-  font-size: small;
-  font-style: italic;
-  width: auto;
 }
