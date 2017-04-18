@@ -89,8 +89,7 @@
 	    "name": "Humor",
 	    "children": [
 			    {"name": "AK Heard", "size": 2, "url": "https://twitter.com/alaskaheard"},
-			    {"name": "Nietzsche", "size": 2, "url": "https://twitter.com/HiphopNietzsche"},
-			    {"name": "Stack Humor", "size": 2, "url": "blog posts/stackhumor.html"}
+			    {"name": "Nietzsche", "size": 2, "url": "https://twitter.com/HiphopNietzsche"}
 	    ]
     },
     {
