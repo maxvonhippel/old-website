@@ -1,6 +1,6 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
-{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 AppleSymbols;\f2\ftech\fcharset77 Symbol;
-\f3\fnil\fcharset0 ArialUnicodeMS;}
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 ArialUnicodeMS;\f2\fnil\fcharset0 AppleSymbols;
+\f3\ftech\fcharset77 Symbol;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
 \margl1440\margr1440\vieww16920\viewh14140\viewkind0
@@ -13,39 +13,78 @@ Exam 3 Notes M401B\
 Max von Hippel\
 Spring 2017\
 \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 \ul \ulc0 Definitions\ulnone \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 \
 
-\b Omega Completeness
+\b Lookup Table
 \b0 \
+Suppose that for any integer 
+\i i
+\i0 , P
+\i i
+\i0  expresses the 
+\i i
+\i0 -th prime, in order from least to greatest.  So for example, P1 = 2, P2 = 3, and P3 = 5.  Then a number g is a \'93lookup table\'94 
+\i iff 
+\i0 some integer q exists such that \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 \
+g = \uc0\u8719 \super q\sub i = 1\nosupersub  P\sub i\super i\super2 \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+
+\b \cf0 \nosupersub Corner Quote Notation
+\b0 \
+Using our definition of encoding above, for any term, formula, sentence, or symbol \uc0\u960 , 
+\f1 \uc0\u8988 
+\f0 \uc0\u960 
+\f1 \uc0\u8989 
+\f0  denotes \'93the code which represents the symbol or sequence of symbols \uc0\u960 \'94.\
 \
+
+\b Underline Notation
+\b0 \
+For any integer K, \ul K\ulnone  denotes the canonical numeral of K.  For example,\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 \ul \ulc0 \
+4\ulnone  = SSSS0\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+
+\b \cf0 Omega Completeness
+\b0 \
 We say that \uc0\u8719  is Omega-Complete (\u969 -Complete) 
 \i iff 
 \i0 for all formulas \'d8, \
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 ( \uc0\u8719  
-\f1 \uc0\u8866 
+\f2 \uc0\u8866 
 \f0  \'d8(\ul n\ulnone ) for all n ) \'97> ( \uc0\u8719  
-\f1 \uc0\u8866 
+\f2 \uc0\u8866 
 \f0  
-\f2 \uc0\u8704 
+\f3 \uc0\u8704 
 \f0 x\'d8(x) )\
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
 
 \b \cf0 Omega Consistency
 \b0 \
-\
 We say that \uc0\u8719  is Omega-Consistent (\u969 -Consistent) 
 \i iff 
 \i0 for all formulas \'d8, \
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 ( \uc0\u8719  
-\f1 \uc0\u8866 
+\f2 \uc0\u8866 
 \f0  \'d8(\ul n\ulnone ) for all n ) \'97> ( \uc0\u8719  
-\f1 \uc0\u8866 \u824 
+\f2 \uc0\u8866 \u824 
 \f0  \'ac 
-\f2 \uc0\u8704 
+\f3 \uc0\u8704 
 \f0 x\'d8(x) )\
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
@@ -55,21 +94,20 @@ We say that \uc0\u8719  is Omega-Consistent (\u969 -Consistent)
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 \uc0\u8719  
-\f1 \uc0\u8866 
+\f2 \uc0\u8866 
 \f0  \uc0\u8710 (\ul n\ulnone ) for all n, 
 \i and
 \i0 \
 \uc0\u8719  
-\f1 \uc0\u8866 
+\f2 \uc0\u8866 
 \f0  \'ac 
-\f2 \uc0\u8704 
+\f3 \uc0\u8704 
 \f0 x\'d8(x)\
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
 
 \b \cf0 Expression
 \b0 \
-\
 We say that a formula \'df \'93expresses\'94 a property P 
 \i iff
 \i0 , for any term 
@@ -78,9 +116,9 @@ We say that a formula \'df \'93expresses\'94 a property P
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 
-\f3 \cf0 \uc0\u8469 
+\f1 \cf0 \uc0\u8469 
 \f0  
-\f1 \uc0\u8872 
+\f2 \uc0\u8872 
 \f0  \'df(
 \i t
 \i0 ) 
@@ -88,7 +126,9 @@ We say that a formula \'df \'93expresses\'94 a property P
 \i0  is P\
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 Likewise, we say that a formula \uc0\u8706  \'93expresses\'94 an n-ary relation R 
+\cf0 Likewise, we say that a formula \uc0\u8706  \'93expresses\'94 an n-
+\i ary
+\i0  relation R 
 \i iff
 \i0 , for any n terms 
 \i t1, \'85 , tN
@@ -96,9 +136,9 @@ We say that a formula \'df \'93expresses\'94 a property P
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 	
-\f3 \uc0\u8469 
+\f1 \uc0\u8469 
 \f0  
-\f1 \uc0\u8872 
+\f2 \uc0\u8872 
 \f0  \uc0\u8706 (
 \i t1, \'85 , tN
 \i0 ) 
@@ -111,17 +151,18 @@ We say that a formula \'df \'93expresses\'94 a property P
 
 \b \cf0 Capture
 \b0 \
-\
 We say that PA \'93captures\'94 a property P with a formula \uc0\u8706  
 \i iff
 \i0 :\
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 (i) PA 
-\f1 \uc0\u8866 
+\f2 \uc0\u8866 
 \f0  \uc0\u8706 (x) if x is P, 
 \i and
 \i0 \
 (ii) PA 
-\f1 \uc0\u8866 
-\f0  \'ac \uc0\u8706 (x) if x is not P}
+\f2 \uc0\u8866 
+\f0  \'ac \uc0\u8706 (x) if x is not P\
+\
+}
