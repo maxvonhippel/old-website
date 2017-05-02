@@ -18,13 +18,7 @@
 			      {"name": "iOS Amazon", "size": 2, "url": "https://github.com/maxvonhippel/Amazon-Mobile-Kit"},
 			      {"name": "PruneCluster", "size": 2, "url": "https://github.com/maxvonhippel/PruneCluster"},
 			      {"name": "Grandpa", "size": 2, "url": "http://mxvh.pl/ArndtvonHippel/"},
-			      {
-				      "name": "OSM Client",
-				      "children": [
-				      	{"name": "Repo", "size": 2, "url": "https://github.com/maxvonhippel/NepalOSMHistory"},
-				      	{"name": "Demo", "size": 2, "url": "http://mxvh.pl/blog%20posts/nepal_demo.html"}
-				      ]
-				  },
+			      {"name": "OSM Client", "size": 2, "url": "blog posts/nepal_demo.html"},
 				  {"name": "OSM Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
 				  {"name": "This", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"},
 			      {"name": "Chetawani", "size": 2, "url": "https://itunes.apple.com/us/app/chetawani/id990010728?mt=8"},
