@@ -111,13 +111,6 @@
 		    {"name": "ZipLine", "size": 2, "url": "http://atitlanreserva.com/wp/en/2015/08/11/ziptrek-footage/"},
 		    {"name": "Andreesen", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"}
 	    ]
-    },
-    {
-	    "name": "Boards",
-	    "children": [
-		    {"name": "UWC GO", "size": 2, "url": "http://www.uwcgo.org/about"},
-		    {"name": "KLL 9-12 '16", "size": 2, "url": "http://www.kathmandulivinglabs.org/team"}
-	    ]
     }
  ]
 }
