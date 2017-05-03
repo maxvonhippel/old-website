@@ -208,40 +208,40 @@ An ordered, finite list S of finite sequences of symbols is a \'93formula-buildi
 \cf0 \ul \ulc0 Proofs & Problems\ulnone \
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 1. Recall that:\
+
+\b \cf0 1. Recall that:\
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 seq(c) =\sub df\nosupersub  
-\f3 \uc0\u8704 
-\f0 y
-\f3 \uc0\u8704 
-\f0 z[(prime(y) ^ prime(z) ^ y|c ^ z < y) \uc0\u8594  z|c] ^ c > \ul 1\ulnone \
+\f3\b0 \uc0\u8704 
+\f0\b y
+\f3\b0 \uc0\u8704 
+\f0\b z[(prime(y) ^ prime(z) ^ y|c ^ z < y) \uc0\u8594  z|c] ^ c > \ul 1\ulnone \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
 \cf0 Show that 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  seq(c) 
+\f1\b0 \uc0\u8469 
+\f0\b  
+\f2\b0 \uc0\u8872 
+\f0\b  seq(c) 
 \i iff
 \i0  c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
 \i i
 \i0 th prime.  You may rely on the fact that each sub-formula in the definition of 
 \i entry
 \i0  expresses its respective property.  (For instance, 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  prime(
+\f1\b0 \uc0\u8469 
+\f0\b  
+\f2\b0 \uc0\u8872 
+\f0\b  prime(
 \i p
 \i0 ) 
 \i iff
 \i0  
 \i p
-\i0  is prime, and so on.)\
+\i0  is prime, and so on.)
+\b0 \
 \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
-
-\b \cf0 \'97//\'97
-\b0 \
+\cf0 \'97//\'97\
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
 \cf0 \
 We have that seq(c) =\sub df\nosupersub  
@@ -436,9 +436,135 @@ We have LHS \uc0\u8594  RHS and RHS \u8594  LHS, therefore we can conclude that
 \b QED
 \b0 \
 \
-2. Recall that:\
+
+\b 2. Recall that:\
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
 \cf0 products(n) =\sub df \nosupersub  \ul 2\ulnone  | n ^ \'ac \ul 4\ulnone  | n ^  
+\f3\b0 \uc0\u8704 
+\f0\b p
+\f3\b0 \uc0\u8704 
+\f0\b q
+\f3\b0 \uc0\u8704 
+\f0\b e [ ( nextPrime(q, p) ^ p | n ) \uc0\u8594  ( q\super e\nosupersub  | n 
+\i iff 
+\i0 p\super Se\nosupersub  | n ) ] ^ seq(n)\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 Prove that 
+\f1\b0 \uc0\u8469 
+\f0\b  
+\f2\b0 \uc0\u8872 
+\f0\b  products(n) 
+\i iff
+\i0  n is the code of a lookup table.  You may rely on the fact that each sub-formula in the definition of 
+\i entry
+\i0  expresses its respective property, as stated before in problem 1.
+\b0 \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 \'97//\'97\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 Suppose that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  products(n).\
+Since 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  seq(n), as demonstrated in our proof for question 1, for some b, n = p\sub 1\super a\nosupersub 1\'85p\sub b\super a\nosupersub b where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
+\i i
+\i0 th prime.\
+\
+Clearly, by definition of 
+\i products
+\i0 , n is divisible by 2 but not divisible by 4.  Therefore a\sub 1\nosupersub  = 1.\
+Suppose that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( nextPrime(q, p) ^ p | n ) for some numbers q and p.  Then 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( q\super e\nosupersub  | n 
+\i iff 
+\i0 p\super Se\nosupersub  | n ) .\
+\
+We know that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  nextPrime(q, p) 
+\i iff 
+\i0 p is the next prime after q.\
+\
+We already established that 2 divides n and 4 does not, so if n > 2, since  
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( nextPrime(2, 3) ^ 3 | n ), we know that 3\super 2\nosupersub  divides n but 3\super 3\nosupersub  does not.\
+\
+By the induction hypothesis, for any p\sub f\nosupersub  , p\sub f \super k\sub  \nosupersub divides n 
+\i iff 
+\i0 k \uc0\u8804  f and f \u8804  b .\
+Therefore n = p\sub 1\super 1\nosupersub \'85 p\sub b\super b\nosupersub  , so we can conclude that ( 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  products(n) ) \uc0\u8594  n is the code of a lookup table.\
+\
+Now suppose instead that n is the code of a lookup table.\
+\
+Then clearly 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  \ul \ulc0 2\ulnone  | n ^ \'ac \ul 4\ulnone  | n ^ seq(n) .\
+\
+Suppose that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( nextPrime(q, p) ^ p | n ) for some numbers q and p.\
+\
+This is true 
+\i iff 
+\i0 p is the next prime after q and p divides n.\
+\
+But n is a lookup table, so if some number h is the 
+\i etc
+\i0  prime, and h | n , then it must be the case that h\super e\nosupersub  | n .\
+\
+Therefore for any numbers q and p 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( nextPrime(q, p) ^ p | n ) 
+\i iff 
+\i0 there exists some number t such that q is the 
+\i t
+\i0 th prime, p is the 
+\i St
+\i0 th prime, p\super St\nosupersub  divides n, and q\super t\nosupersub  divides n .\
+\
+Obviously if 0 \uc0\u8804  k \u8804  t and q\super t\nosupersub  divides n then q\super k\nosupersub  divides n .  So by the induction hypothesis it follows that for any arbitrary numbers q, e, and p, 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( nextPrime(q, p) ^ p | n ) \uc0\u8594 
+\i  
+\f1\i0 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  ( q\super e\nosupersub  | n 
+\i iff 
+\i0 p\super Se\nosupersub  | n ).\
+\
+Since q, e, and p were arbitrary, 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  
 \f3 \uc0\u8704 
 \f0 p
 \f3 \uc0\u8704 
@@ -446,8 +572,54 @@ We have LHS \uc0\u8594  RHS and RHS \u8594  LHS, therefore we can conclude that
 \f3 \uc0\u8704 
 \f0 e [ ( nextPrime(q, p) ^ p | n ) \uc0\u8594  ( q\super e\nosupersub  | n 
 \i iff 
-\i0 p\super Se\nosupersub  | n ) ] ^ seq(n)\
+\i0 p\super Se\nosupersub  | n ) ]\
 \
+We already established that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  \ul \ulc0 2\ulnone  | n ^ \'ac \ul 4\ulnone  | n ^ seq(n) , so we can conclude that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  \ul \ulc0 2\ulnone  | n ^ \'ac \ul 4\ulnone  | n ^  
+\f3 \uc0\u8704 
+\f0 p
+\f3 \uc0\u8704 
+\f0 q
+\f3 \uc0\u8704 
+\f0 e [ ( nextPrime(q, p) ^ p | n ) \uc0\u8594  ( q\super e\nosupersub  | n 
+\i iff 
+\i0 p\super Se\nosupersub  | n ) ] ^ seq(n) .\
+\
+But that\'92s the definition of 
+\i seq
+\i0 , so clearly ( n is the code of a lookup table ) \uc0\u8594  
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  products(n) .\
+\
+We have LHS \uc0\u8594  RHS and RHS \u8594  LHS so we can conclude that LHS 
+\i iff 
+\i0 RHS:\
+\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 ( n is the code of a lookup table ) 
+\i iff
+\i0  
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  products(n)\
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 \
+
+\b \cf0 QED
+\b0 \
+\
+
+\b 3. 
+\b0 \
+\
+\
 }
