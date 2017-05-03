@@ -3,7 +3,7 @@
 \f3\ftech\fcharset77 Symbol;}
 {\colortbl;\red255\green255\blue255;}
 {\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww20560\viewh14140\viewkind0
+\margl1440\margr1440\vieww28600\viewh18000\viewkind0
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
 
 \f0\fs48 \cf0 \
@@ -222,7 +222,7 @@ An ordered, finite list S of finite sequences of symbols is a \'93formula-buildi
 \f2 \uc0\u8872 
 \f0  seq(c) 
 \i iff
-\i0  c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and each p\sub i\nosupersub  is the 
+\i0  c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
 \i i
 \i0 th prime.  You may rely on the fact that each sub-formula in the definition of 
 \i entry
@@ -238,121 +238,216 @@ An ordered, finite list S of finite sequences of symbols is a \'93formula-buildi
 \i p
 \i0  is prime, and so on.)\
 \
-(i) Suppose that, for some c, 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  seq(c)\
-(ii) seq(c) =\sub df\nosupersub  
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+
+\b \cf0 \'97//\'97
+\b0 \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 \
+We have that seq(c) =\sub df\nosupersub  
 \f3 \uc0\u8704 
 \f0 y
 \f3 \uc0\u8704 
-\f0 z[(prime(y) ^ prime(z) ^ y|c ^ z < y) \uc0\u8594  z|c] ^ c > \ul 1\ulnone \
-(iii) By 
-\i modus ponens
-\i0  on (i), (ii), 
+\f0 z[(prime(y) ^ prime(z) ^ y|c ^ z < y) \uc0\u8594  z|c] ^ c > \ul 1\ulnone  .\
+Therefore 
 \f1 \uc0\u8469 
 \f0  
 \f2 \uc0\u8872 
 \f0  seq(c) 
-\i iff
-\i0  
-\f1 \uc0\u8469 
+\i iff 
+\f1\i0 \uc0\u8469 
 \f0  
-\f2 \uc0\u8872  
+\f2 \uc0\u8872 
+\f0  
 \f3 \uc0\u8704 
 \f0 y
 \f3 \uc0\u8704 
 \f0 z[(prime(y) ^ prime(z) ^ y|c ^ z < y) \uc0\u8594  z|c] ^ c > \ul 1\ulnone \
-(iv) By the definition of validity and (iii), 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872  
-\f0 c > \ul 1\ulnone  .  Therefore if 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  seq(c), then c must be a natural number greater than 1 .\
-(v) The first prime number is 2, and any number with a zero or greater exponent is greater than or equal to 1.  So clearly if c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n then c must be a natural number greater than 1 .\
-(vi) By the Fundamental Theorem of Arithmetic, for every natural number 
+\
+By the Fundamental Theorem of Calculus, for any number 
 \i q
-\i0  greater than 1, there exists some natural number 
-\i p
-\i0  such that, for some finite sequence of 
-\i p
-\i0  integers < a\sub 1\nosupersub , \'85 , a\sub p\nosupersub  >, \
+\i0 , if 
+\i q
+\i0  is a natural number greater than 1, then there is some unique ordered sequence of natural numbers < a\sub 1\nosupersub , \'85 , a
+\i \sub w
+\i0 \nosupersub  > such that \
 \pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
-
-\i \cf0 		p\
-q 
-\i0 = \uc0\u8719  p\sub i\super a\nosupersub i\
-		i = 1\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 (vii) By 
-\i modus ponens
-\i0  on (iv), (v), if 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  seq(c) 
-\i or 
-\i0 c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n , then c must be a natural number greater than 1 .\
-(viii) By 
-\i modus ponens
-\i0  on (vi), (vii), if 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  seq(c) 
-\i or 
-\i0 c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n , there exists some natural number 
-\i p
-\i0  such that, for some finite sequence of 
-\i p
-\i0  integers < a\sub 1\nosupersub , \'85 , a\sub p\nosupersub  >, \
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
-
-\i \cf0 		p\
-c 
-\i0 = \uc0\u8719  p\sub i\super a\nosupersub i\
-		i = 1\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 We can unpack this as:\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
-\cf0 c = p\sub 1\super a\nosupersub 1\'85p\sub p\super a\nosupersub p \
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 In other words:\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
-\cf0 ( c = p\sub 1\super a\nosupersub 1\'85p\sub p\super a\nosupersub p ) \uc0\u8594  ( 
-\f1 \uc0\u8469 
-\f0  
-\f2 \uc0\u8872 
-\f0  seq(c) ) , 
-\i and
+\cf0 		
+\i w
 \i0 \
+
+\i q
+\i0  = \uc0\u8719  p
+\i \sub i
+\i0 \super a
+\i \nosupersub i
+\i0 \
+		
+\i i
+\i0  = 1\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 \'85 and a\sub w\nosupersub  is > 0.\
+Suppose that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  seq(c) .  Then c > \ul 1\ulnone , so there exists some number 
+\i w
+\i0  such that \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+
+\i \cf0 w
+\i0 \
+c = \uc0\u8719  p
+\i \sub i
+\i0 \super a
+\i \nosupersub i
+\i0 \
+		
+\i i
+\i0  = 1\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 \'85 and a\sub w\nosupersub  is > 0.\
+Clearly in this case p\sub w\super a\nosupersub w | c .\
+So we just need to show that for all 0 < j < w, it is the case that a\sub j\nosupersub  > 0 .\
+p\sub w\super a\nosupersub w | c \uc0\u8594  p\sub w\nosupersub  | c .  Therefore p\sub w\nosupersub  | c .\
+
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  
+\f3 \uc0\u8704 
+\f0 y
+\f3 \uc0\u8704 
+\f0 z[(prime(y) ^ prime(z) ^ y|c ^ z < y) \uc0\u8594  z|c]\
+By assumption clearly 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  prime(p\sub w\nosupersub ).\
+\
+We have two cases to consider: either w = 1, or w > 1.\
+If w = 1, then c = 2\super q\nosupersub  for some natural number q > 0, and we are done.\
+If w > 1, then 2 < p\sub w\nosupersub  .  \
+In this case, since clearly 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  prime(2), we already established that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  prime(p\sub w\nosupersub ), we already established that p\sub w\nosupersub  | c , and we assume that 2 < p\sub w\nosupersub  , we can formally state that:\
+
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  prime(p\sub w\nosupersub ) ^ prime(2) ^ p\sub w\nosupersub |c ^ 2 < p\sub w\nosupersub \
+But since this is the predicate in the universal instantiation of the first clause of the conjugate of the definition of seq(c), and since we assumed that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  seq(c), we can clearly conclude that 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  2 | c.\
+\
+We repeat this logic for each p\sub i\nosupersub  in \{ p\sub i\nosupersub  : 1 < i < w \}.\
+\
+It follows that if 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  seq(c) then there exists some number 
+\i w
+\i0  such that \
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+
+\i \cf0 w
+\i0 \
+c = \uc0\u8719  p
+\i \sub i
+\i0 \super a
+\i \nosupersub i
+\i0 \
+		
+\i i
+\i0  = 1\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 and each a\sub i\nosupersub  is > 0.\
 ( 
 \f1 \uc0\u8469 
 \f0  
 \f2 \uc0\u8872 
-\f0  seq(c) ) \uc0\u8594  ( c = p\sub 1\super a\nosupersub 1\'85p\sub p\super a\nosupersub p )\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 (ix) It is a tautology that, for all formulas A and B:\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
-\cf0 ( A \uc0\u8594  B ^ B \u8594  A ) \u8594  A 
-\i iff  
-\i0 B\
-\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
-\cf0 (x) By 
-\i modus ponens
-\i0  on (viii), (ix), and universal instantiation, it follows that 
+\f0  seq(c) ) \uc0\u8594  c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
+\i i
+\i0 th prime.\
+Now suppose that c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
+\i i
+\i0 th prime.\
+Clearly the smallest possible value of c is 2\super 1\nosupersub  = 2 , so c > \ul 1\ulnone .\
+\
+Suppose we have some numbers a and b.\
+\
+If a is not prime or b is not prime or b \uc0\u8805  a or it is not the case that b | c, then by the invalidity of the predicate and validity rules for conjunctions and implications, 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  (prime(a) ^ prime(b) ^ b|c ^ a < b) \uc0\u8594  a|c .\
+\
+On the other hand, if a is prime, b is prime, a < b, and b | c, then clearly there exist some i, j such that a = p\sub i\nosupersub  , b = p\sub j\nosupersub , and p\sub j\nosupersub  \uc0\u8804  p\sub n\nosupersub .\
+In this case, by the definition of primality, it must be the case that p\sub i\nosupersub  , p\sub j\nosupersub  \uc0\u949  \{ p\sub e\nosupersub  : 1 \uc0\u8804  e \u8804  n \} .\
+In that case, there exists some a\sub i\nosupersub  such that p\sub i\super a\nosupersub i | c .\
+In which case 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  (prime(a) ^ prime(b) ^ b|c ^ a < b) \uc0\u8594  a|c .\
+Therefore if c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
+\i i
+\i0 th prime then 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  (prime(a) ^ prime(b) ^ b|c ^ a < b) \uc0\u8594  a|c .\
+\
+But that\'92s the definition of 
+\i seq
+\i0 , so:\
+\
+( c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
+\i i
+\i0 th prime ) \uc0\u8594  ( 
+\f1 \uc0\u8469 
+\f0  
+\f2 \uc0\u8872 
+\f0  seq(c) )\
+\
+We have LHS \uc0\u8594  RHS and RHS \u8594  LHS, therefore we can conclude that 
 \f1 \uc0\u8469 
 \f0  
 \f2 \uc0\u8872 
 \f0  seq(c) 
 \i iff
-\i0  c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and each p\sub i\nosupersub  is the 
+\i0  c = p\sub 1\super a\nosupersub 1\'85p\sub n\super a\nosupersub n where each a\sub i\nosupersub  is positive and natural and each p\sub i\nosupersub  is the 
 \i i
 \i0 th prime.  
 \b QED
 \b0 \
+\
+2. Recall that:\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\qc\partightenfactor0
+\cf0 products(n) =\sub df \nosupersub  \ul 2\ulnone  | n ^ \'ac \ul 4\ulnone  | n ^  
+\f3 \uc0\u8704 
+\f0 p
+\f3 \uc0\u8704 
+\f0 q
+\f3 \uc0\u8704 
+\f0 e [ ( nextPrime(q, p) ^ p | n ) \uc0\u8594  ( q\super e\nosupersub  | n 
+\i iff 
+\i0 p\super Se\nosupersub  | n ) ] ^ seq(n)\
+\
+\pard\tx1411\tx1414\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1480\fi-42\pardirnatural\partightenfactor0
+\cf0 \
 }
