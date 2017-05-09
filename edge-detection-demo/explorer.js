@@ -32,11 +32,6 @@ function toArray(a) {
 var text = document.createTextNode('Mouse over the geometric shapes and this text should update.');
 container.appendChild(text);
 
-// on mouse out for container set text back to original default
-$('#container').on('mouseout', function(event) {
-	text.nodeValue = 'Mouse over the geometric shapes and this text should update.';
-});
-
 function assign_callback_for_event(element, event_name) {
 
 	// code from http://stackoverflow.com/a/38488246/1586231
