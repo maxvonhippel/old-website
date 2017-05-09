@@ -7,6 +7,32 @@ container.style.height = '60vw';
 container.style.display = 'block';
 container.style.margin = 'auto';
 
+// add the images - hardcoded for now, but will be made dynamic later
+// (using some sort of database or internal data file, such as csv or json)
+var MainCabinet = document.createElement("img");
+
+MainCabinet.setAttribute("src", "photos/MainCabinet.png");
+MainCabinet.setAttribute("class", "layer");
+MainCabinet.setAttribute("id", "MainCabinet");
+
+MainCabinet.style.position = "absolute";
+MainCabinet.style.maxHeight = "100%";
+MainCabinet.style.maxWidth = "100%";
+
+container.appendChild(MainCabinet);
+
+var Buttons = document.createElement("img");
+
+Buttons.setAttribute("src", "photos/Buttons.png");
+Buttons.setAttribute("class", "layer");
+Buttons.setAttribute("id", "Buttons");
+
+Buttons.style.position = "absolute";
+Buttons.style.maxHeight = "100%";
+Buttons.style.maxWidth = "100%";
+
+container.appendChild(Buttons);
+
 var canvas = document.createElement("canvas");
 // add the canvas
 var context = canvas.getContext('2d');
@@ -103,4 +129,6 @@ function assign_callback(element, index, array) {
 var images = toArray(container.getElementsByClassName("layer"));
 images.forEach(assign_callback);
 assign_callback_for_event(images[images.length-1], "mousemove");
+
+// fix problem where border of container doesn't completely wrap around inner images
 container.style.clear = 'both';
