@@ -1,3 +1,8 @@
+// find the container for the interactive
+var container = document.getElementById("container");
+// set the container style sheet
+container.style.border = '1px solid #000';
+
 var canvas = document.createElement("canvas");
 // add the canvas
 var context = canvas.getContext('2d');
@@ -23,12 +28,9 @@ function toArray(a) {
 	return result;
 }
 
-// find the container for the interactive
-var container = document.getElementById("container");
-
 // add some text for demo
 var text = document.createTextNode('Mouse over the geometric shapes and this text should update.');
-container.parentNode.insertBefore(text, container);
+container.appendChild(text);
 
 // on mouse out for container set text back to original default
 $('#container').on('mouseout', function(event) {
