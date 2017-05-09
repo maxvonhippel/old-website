@@ -30,11 +30,20 @@ var container = document.getElementById("container");
 var text = document.createTextNode('Mouse over the geometric shapes and this text should update.');
 container.parentNode.insertBefore(text, container);
 
+// on mouse out for container set text back to original default
+$('#container').on('mouseout', function(event) {
+	text.nodeValue = 'Mouse over the geometric shapes and this text should update.';
+});
+
 function assign_callback_for_event(element, event_name) {
 
 	// code from http://stackoverflow.com/a/38488246/1586231
 	var _name = layer_name(element.id);
 
+	// apply css to make the image position absolute
+	$(_name).css('position','absolute');
+
+	// apply the pseudo-mouseover event listener, handler
 	$(_name).on(event_name, function(event) {
 
 			// Get click coordinates
@@ -46,7 +55,6 @@ function assign_callback_for_event(element, event_name) {
 
 			// Draw image to canvas
 			// and read Alpha channel value
-			console.log(element.id);
 			context.drawImage(element, 0, 0, w, h);
 			alpha = context.getImageData(x, y, 1, 1).data[3]; // [0]R [1]G [2]B [3]A
 			// If pixel is transparent,
@@ -64,12 +72,11 @@ function assign_callback_for_event(element, event_name) {
 					var e = new jQuery.Event("mousedown");
 					e.pageX = event.pageX;
 					e.pageY = event.pageY;
-					console.log("CHECKING: " + next_layer.id);
 					$(layer_name(next_layer.id)).trigger(e);
 				}
 				else {
 					// background
-					text.nodeValue = "background";
+					text.nodeValue = "Mouse over the geometric shapes and this text should update.";
 				}
 
 			} else {
