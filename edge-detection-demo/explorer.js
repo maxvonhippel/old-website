@@ -103,3 +103,4 @@ function assign_callback(element, index, array) {
 var images = toArray(container.getElementsByClassName("layer"));
 images.forEach(assign_callback);
 assign_callback_for_event(images[images.length-1], "mousemove");
+container.style.clear = 'both';
