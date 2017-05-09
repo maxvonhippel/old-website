@@ -2,6 +2,10 @@
 var container = document.getElementById("container");
 // set the container style sheet
 container.style.border = '1px solid #000';
+container.style.width = '60%';
+container.style.height = '60vw';
+container.style.display = 'block';
+container.style.margin = 'auto';
 
 var canvas = document.createElement("canvas");
 // add the canvas
