@@ -9,29 +9,23 @@ container.style.margin = 'auto';
 
 // add the images - hardcoded for now, but will be made dynamic later
 // (using some sort of database or internal data file, such as csv or json)
-var MainCabinet = document.createElement("img");
+var layer_names = ["MainCabinet","AF600","Buttons","C2000Relay",
+					"Contractor","MCB","MCCB","MotorStarter",
+					"OverloadRelay","SafetySwitch","SoftStarter"];
 
-MainCabinet.setAttribute("src", "photos/MainCabinet.png");
-MainCabinet.setAttribute("class", "layer");
-MainCabinet.setAttribute("id", "MainCabinet");
+for (var i = 0; i < layer_names.length; i++) {
+    var new_layer = document.createElement("img");
+    var new_layer_src = "photos/" + layer_names[i] + ".png";
+    new_layer.setAttribute("src", new_layer_src);
+	new_layer.setAttribute("class", "layer");
+	new_layer.setAttribute("id", layer_names[i]);
 
-MainCabinet.style.position = "absolute";
-MainCabinet.style.maxHeight = "100%";
-MainCabinet.style.maxWidth = "100%";
+	new_layer.style.position = "absolute";
+	new_layer.style.maxHeight = "60%";
+	new_layer.style.maxWidth = "60%";
 
-container.appendChild(MainCabinet);
-
-var Buttons = document.createElement("img");
-
-Buttons.setAttribute("src", "photos/Buttons.png");
-Buttons.setAttribute("class", "layer");
-Buttons.setAttribute("id", "Buttons");
-
-Buttons.style.position = "absolute";
-Buttons.style.maxHeight = "100%";
-Buttons.style.maxWidth = "100%";
-
-container.appendChild(Buttons);
+	container.appendChild(new_layer);
+}
 
 var canvas = document.createElement("canvas");
 // add the canvas
@@ -59,7 +53,7 @@ function toArray(a) {
 }
 
 // add some text for demo
-var text = document.createTextNode('Mouse over the geometric shapes and this text should update.');
+var text = document.createTextNode('Mouse over the components and this text should update.');
 container.appendChild(text);
 
 function assign_callback_for_event(element, event_name) {
@@ -103,7 +97,7 @@ function assign_callback_for_event(element, event_name) {
 				}
 				else {
 					// background
-					text.nodeValue = "Mouse over the geometric shapes and this text should update.";
+					text.nodeValue = "Mouse over the components and this text should update.";
 				}
 
 			} else {
