@@ -40,16 +40,17 @@
 		     	"children": [
 			     	{"name": "3D-Scanning", "size": 2, "url": "https://www.diplomaframe.com/contests/frame-my-future-scholarship-contest-2015/details.aspx?entryID=71901"},
 			     	{"name": "Whoa! Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"},
-			     	{"name": "Jazz Shot", "size": 2, "url": "/blog posts/jazzshot.html"}
+			     	{"name": "Jazz Shot", "size": 2, "url": "/blog posts/jazzshot.html"},
+			     	{"name": "bluster", "size": 2, "url": "https://github.com/maxvonhippel/bluster"},
+			     	{"name": "OSM2GIF", "size": 2, "url": "https://github.com/maxvonhippel/osm2gif"}
 		     	]
 		     },
 		     {
 			     "name": "In Progress",
 			     "children": [
 				     {"name": "BASE9", "size": 2, "url": "https://github.com/maxvonhippel/base"},
-				     {"name": "OSM2GIF", "size": 2, "url": "https://github.com/maxvonhippel/osm2gif"},
 				     {"name": "QIIME2", "size": 2, "url": "https://github.com/qiime2"},
-				     {"name": "bluster", "size": 2, "url": "https://github.com/maxvonhippel/bluster"}
+				     {"name": "White Dwarfs", "size": 2, "url": "http://mxvh.pl/stellarVisualization/site/"}
 			     ]
 			}
 	    ]
