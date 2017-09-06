@@ -97,7 +97,8 @@
 	    	{"name": "GitHub", "size": 2, "url": "https://github.com/maxvonhippel/"},
 	    	{"name": "Reddit", "size": 2, "url": "https://www.reddit.com/user/Maxvh/"},
 	    	{"name": "Twitter", "size": 2, "url": "https://twitter.com/_m_vh"},
-	    	{"name": "YouTube", "size": 2, "url": "https://www.youtube.com/c/MaxvonHippel"}
+	    	{"name": "YouTube", "size": 2, "url": "https://www.youtube.com/c/MaxvonHippel"},
+	    	{"name": "Top 10 Lists", "size": 2, "url": "/blog posts/topten.html"}
 	    ]
     },
     {
