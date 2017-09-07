@@ -21,18 +21,10 @@
 			      {"name": "OSM Client", "size": 2, "url": "blog posts/nepal_demo.html"},
 				  {"name": "OSM Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
 				  {"name": "This", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"},
-			      {"name": "Chetawani", "size": 2, "url": "https://itunes.apple.com/us/app/chetawani/id990010728?mt=8"},
-				  {"name": "BackNote", "size": 2, "url": "https://itunes.apple.com/us/app/backnote/id741559186?mt=8"},
-				  {"name": "Essayist", "size": 2, "url": "https://itunes.apple.com/us/app/essayist/id784276845?mt=8"},
+			      {"name": "Chetawani", "size": 2, "url": "https://github.com/maxvonhippel/Chetawani"},
+				  {"name": "iOS Graveyard", "size": 2, "url": "https://github.com/maxvonhippel/iOS-Graveyard"},
 				  {"name": "Wall Grid", "size": 2, "url": "https://itunes.apple.com/us/app/wall-grid/id879981563?mt=8"},
-				  {"name": "Chirp Alert", "size": 2, "url": "https://itunes.apple.com/us/app/chirp-alert/id992969456?mt=8"},
-				  {"name": "Bluster", "size": 2, "url": "https://itunes.apple.com/us/app/bluster/id825146925?mt=8"},
-				  {"name": "Aglow LE", "size": 2, "url": "https://itunes.apple.com/us/app/aglow-le/id866376876?mt=8"},
-				  {"name": "Franca", "size": 2, "url": "https://itunes.apple.com/us/app/franca/id982879508?mt=8"},
-			      {"name": "cutlery", "size": 2, "url": "https://itunes.apple.com/us/app/cutlery/id1148457349?mt=8"},
-			      {"name": "GDORK", "size": 2, "url": "https://itunes.apple.com/us/app/gdork/id1145258813?mt=8"},
-				  {"name": "V-Speed", "size": 2, "url": "https://itunes.apple.com/us/app/v-speed-calculator/id1138201652?mt=8"},
-				  {"name": "Card Creator", "size": 2, "url": "https://itunes.apple.com/us/app/card-creator-catastrophic/id1128610675?mt=8"}
+				  {"name": "Franca", "size": 2, "url": "https://itunes.apple.com/us/app/franca/id982879508?mt=8"}
 		      ]
 		      },
 		     {
