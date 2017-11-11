@@ -16,6 +16,7 @@
 		     "name": "Completed",
 		      "children": [
 			      {"name": "General Electric", "size": 2, "url": "http://mxvh.pl/GE"},
+			      {"name": "Resume", "size": 2, "url": "http://mxvh.pl/resume/"},
 			      {"name": "QIIME 2", "size": 2, "url": "https://github.com/qiime2"},
 			      {"name": "iOS Amazon", "size": 2, "url": "https://github.com/maxvonhippel/Amazon-Mobile-Kit"},
 			      {"name": "PruneCluster", "size": 2, "url": "https://github.com/maxvonhippel/PruneCluster"},
