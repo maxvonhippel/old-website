@@ -44,7 +44,7 @@
 			     "name": "In Progress",
 			     "children": [
 				     {"name": "Slepian Toolset", "size": 2, "url": "https://github.com/maxvonhippel/MVHSlepian"},
-				     {"name": "White Dwarfs", "size": 2, "url": "http://mxvh.pl/stellarVisualization/site/"}
+				     {"name": "White Dwarfs", "size": 2, "url": "http://github.com/maxvonhippel/stellarVisualization"}
 			     ]
 			}
 	    ]
@@ -103,7 +103,8 @@
 		    {"name": "1996", "size": 2, "url": "http://www.dartmouth.org/classes/89/Newsletters/1997%20March.htm"},
 		    {"name": "2002!", "size": 2, "url": "http://www.pitt.edu/~atsea/atsea.html"},
 		    {"name": "ZipLine", "size": 2, "url": "http://atitlanreserva.com/wp/en/2015/08/11/ziptrek-footage/"},
-		    {"name": "Andreesen", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"}
+		    {"name": "Andreesen", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"},
+		    {"name": "Hacking Voting", "size": 2, "url": "https://www.facebook.com/NowThisPolitics/videos/1892166217481526/"}
 	    ]
     }
  ]
