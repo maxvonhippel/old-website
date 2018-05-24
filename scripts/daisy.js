@@ -1,3 +1,5 @@
+document.getElementById("NOJS").outerHTML = "";
+
 var width = 960,
     height = 1000,
     radius = Math.min(width, height) / 2;
