@@ -12,67 +12,21 @@
   	{
 	   "name": "Coding",
 	   "children": [
-		     {
-		     "name": "Completed",
-		      "children": [
-			      {"name": "General Electric", "size": 2, "url": "http://mxvh.pl/GE"},
-			      {"name": "Resume", "size": 2, "url": "http://mxvh.pl/resume/"},
-			      {"name": "QIIME 2", "size": 2, "url": "https://github.com/qiime2"},
-			      {"name": "iOS Amazon", "size": 2, "url": "https://github.com/maxvonhippel/Amazon-Mobile-Kit"},
-			      {"name": "PruneCluster", "size": 2, "url": "https://github.com/maxvonhippel/PruneCluster"},
-			      {"name": "Grandpa's Site", "size": 2, "url": "http://mxvh.pl/ArndtvonHippel/"},
-			      {"name": "OSM Client", "size": 2, "url": "blog posts/nepal_demo.html"},
-				  {"name": "OSM Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
-				  {"name": "This Site", "size": 2, "url": "https://github.com/maxvonhippel/maxvonhippel.github.io"},
-			      {"name": "Chetawani", "size": 2, "url": "https://github.com/maxvonhippel/Chetawani"},
-				  {"name": "iOS Graveyard", "size": 2, "url": "https://github.com/maxvonhippel/iOS-Graveyard"},
-				  {"name": "Wall Grid", "size": 2, "url": "https://itunes.apple.com/us/app/wall-grid/id879981563?mt=8"},
-				  {"name": "Franca", "size": 2, "url": "https://itunes.apple.com/us/app/franca/id982879508?mt=8"}
-		      ]
-		      },
-		     {
-		     	"name": "Abandoned",
-		     	"children": [
-			     	{"name": "3D-Scanning", "size": 2, "url": "https://www.diplomaframe.com/contests/frame-my-future-scholarship-contest-2015/details.aspx?entryID=71901"},
-			     	{"name": "Whoa! Mars", "size": 2, "url": "https://devpost.com/software/whoa-mars"},
-			     	{"name": "Jazz Shot", "size": 2, "url": "/blog posts/jazzshot.html"},
-			     	{"name": "bluster", "size": 2, "url": "https://github.com/maxvonhippel/bluster"},
-			     	{"name": "OSM2GIF", "size": 2, "url": "https://github.com/maxvonhippel/osm2gif"}
-		     	]
-		     },
-		     {
-			     "name": "In Progress",
-			     "children": [
-				     {"name": "Slepian Toolset", "size": 2, "url": "https://github.com/maxvonhippel/MVHSlepian"},
-				     {"name": "White Dwarfs", "size": 2, "url": "http://github.com/maxvonhippel/stellarVisualization"}
-			     ]
-			}
+	    	{"name": "General Electric", "size": 2, "url": "http://mxvh.pl/GE"},
+	      	{"name": "Resume", "size": 2, "url": "http://mxvh.pl/resume/"},
+	      	{"name": "QIIME 2", "size": 2, "url": "https://github.com/qiime2"},
+	      	{"name": "OSM Client", "size": 2, "url": "blog posts/nepal_demo.html"},
+		  	{"name": "OSM Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
+	      	{"name": "Chetawani", "size": 2, "url": "https://github.com/maxvonhippel/Chetawani"},
+		  	{"name": "iOS Graveyard", "size": 2, "url": "https://github.com/maxvonhippel/iOS-Graveyard"}
 	    ]
     },
     {
 	    "name": "Photos",
 	    "children": [
 		 {"name": "Best Of", "size": 2, "url": "/blog posts/photography.html"},
-		 {
-		    	"name": "Blogging",
-		    	"children": [
-			    	{"name": "Road Trip", "size": 2, "url": "/blog posts/roadtrip.html"},
-			    	{"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}
-			]
-		  },
-		  {
-			"name": "Pro",
-			"children": [
-				{"name": "IDOL", "size": 2, "url": "http://hopbackstage.org/2016/03/02/introducing-the-dartmouth-idol-2016-finalists/"},
-				{"name": "Barbary Coast", "size": 2, "url": "http://hopbackstage.org/2016/05/13/viral-worthy-videos-from-the-coast/"},
-				{"name": "Glee Club", "size": 2, "url": "http://hopbackstage.org/2016/04/26/sara-sitzer-on-rachmaninoffs-all-night-vigil/"},
-				{"name": "Choreography", "size": 2, "url": "http://hopbackstage.org/2016/04/05/collaborative-choreography-at-collis-cabaret/"},
-				{"name": "Music & Pie", "size": 2, "url": "http://hopbackstage.org/2016/03/07/music-and-pie-of-course/"},
-				{"name": "Piano Class", "size": 2, "url": "http://hopbackstage.org/2016/01/29/whats-in-a-masterclass/"},
-				{"name": "Shakespeare", "size": 2, "url": "http://hopbackstage.org/2016/01/18/shakespeare-doesnt-only-go-with-pizza/"},
-				{"name": "Chicago", "size": 2, "url": "http://www.vnews.com/Archives/2016/02/Highlights-dc-vn-022516"}
-			]
-		  }
+		 {"name": "Road Trip", "size": 2, "url": "/blog posts/roadtrip.html"},
+		 {"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}
 	    ]
     },
     {
@@ -87,7 +41,6 @@
 	    "children": [
 	    	{"name": "Stack Overflow", "size": 2, "url": "http://stackoverflow.com/users/1586231/max-von-hippel"},
 	    	{"name": "Keybase.io", "size": 2, "url": "https://keybase.io/maxvonhippel"},
-	    	{"name": "EDC", "size": 2, "url": "http://everydaycarry.com/profile/45394/max-von-hippel"},
 	    	{"name": "GitHub", "size": 2, "url": "https://github.com/maxvonhippel/"},
 	    	{"name": "Reddit", "size": 2, "url": "https://www.reddit.com/user/Maxvh/"},
 	    	{"name": "YouTube", "size": 2, "url": "https://www.youtube.com/c/MaxvonHippel"}
