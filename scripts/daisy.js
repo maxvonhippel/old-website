@@ -1,5 +1,5 @@
 // DATA BELOW, BLAME CORS FOR THIS HIDEOUSNESS
-var data = {
+var thedata = {
  "name": "Contents",
  "children": [
   {
@@ -93,7 +93,7 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.max(0, y(d.y)); })
     .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
-d3.json(data, function(error, root) {
+d3.json(thedata, function(error, root) {
   var g = svg.selectAll("g")
       .data(partition.nodes(root))
     .enter().append("g");
@@ -112,27 +112,27 @@ d3.json(data, function(error, root) {
     .text(function(d) { return d.name; });
 
   function click(d) {
-	if (d.url != null) {
-		location.href = d.url;
-	}
-	// fade out all text elements
-	text.transition().attr("opacity", 0);
+  	if (d.url != null) {
+  		location.href = d.url;
+  	}
+  	// fade out all text elements
+  	text.transition().attr("opacity", 0);
 
-	path.transition()
-	.duration(750)
-	.attrTween("d", arcTween(d))
-	.each("end", function(e, i) {
-	        // check if the animated element's data e lies within the visible angle span given in d
-	        if (e.x >= d.x && e.x < (d.x + d.dx)) {
+  	path.transition()
+  	.duration(750)
+  	.attrTween("d", arcTween(d))
+  	.each("end", function(e, i) {
+  	        // check if the animated element's data e lies within the visible angle span given in d
+  	        if (e.x >= d.x && e.x < (d.x + d.dx)) {
 
-				var arcText = d3.select(this.parentNode).select("text");
-				// fade in the text element and recalculate positions
-				arcText.transition().duration(750)
-				.attr("opacity", 1)
-				.attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
-				.attr("x", function(d) { return y(d.y); });
-	        }
-	});
+  				var arcText = d3.select(this.parentNode).select("text");
+  				// fade in the text element and recalculate positions
+  				arcText.transition().duration(750)
+  				.attr("opacity", 1)
+  				.attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
+  				.attr("x", function(d) { return y(d.y); });
+  	        }
+  	});
   }
 
 });
