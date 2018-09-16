@@ -1,5 +1,5 @@
 // DATA BELOW, BLAME CORS FOR THIS HIDEOUSNESS
-var thedata = {
+var thedata = [{
  "name": "Contents",
  "children": [
   {
@@ -62,7 +62,7 @@ var thedata = {
       ]
     }
  ]
-};
+}];
 // CODE BELOW
 document.getElementById("NOJS").outerHTML = "";
 
