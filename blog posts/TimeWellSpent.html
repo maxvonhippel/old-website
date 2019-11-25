@@ -121,7 +121,7 @@ there in janitorial work? None. At least a janitor is employed! Socrates was a h
 
 <br><br>
 I’m standing in a chronological bank-vault, done up like Eli Wallach in a black face-mask and
-striped T-shirt, mother-of-pearl handled revolvers on each hip, and a Stetson hat on my dome. My knapsack algorithm will decide how close I come to evolving into Super-Max. A wasted minute seems like no big deal. I can fit at least 878,592,959.99 useful minutes in my (highly practical) robbery knapsack. But a wasted minute must be compared to an optimal minute, which might add to the net value of my knapsack. From this perspective, a wasted minute is robbery. (In my robbery metaphor, it’s bank robbery robbery. Meta-robbery.) A wasted minute is a phone number that Yossarian throws down the drain.  A wasted minute is a wrong turn in a random walk across the convex hull of my personal potential.
+striped T-shirt, mother-of-pearl handled revolvers on each hip, and a Stetson hat on my dome. My knapsack algorithm will decide how close I come to evolving into Super-Max. A wasted minute seems like no big deal. I can fit at least <div id="minutes">878,592,959.99</div> useful minutes in my (highly practical) robbery knapsack. But a wasted minute must be compared to an optimal minute, which might add to the net value of my knapsack. From this perspective, a wasted minute is robbery. (In my robbery metaphor, it’s bank robbery robbery. Meta-robbery.) A wasted minute is a phone number that Yossarian throws down the drain.  A wasted minute is a wrong turn in a random walk across the convex hull of my personal potential.
 
 <br><br>
 The clock is ticking.  I grab <a href="https://en.wikipedia.org/wiki/Moonrise,_Hernandez,_New_Mexico">Moon Over Juarez</a> and make a dash for it.
@@ -130,12 +130,33 @@ The clock is ticking.  I grab <a href="https://en.wikipedia.org/wiki/Moonrise,_H
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" language="JavaScript">
   function set_body_height() { // set body height = window height
-    $('body').height($(window).height());
+      $('body').height($(window).height());
   }
   $(document).ready(function() {
-    $(window).bind('resize', set_body_height);
-    set_body_height();
+      $(window).bind('resize', set_body_height);
+      set_body_height();
   });
+  // https://stackoverflow.com/a/2901298/1586231
+  function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  function set_minutes() {
+  	  // Now calculate number of minutes and replace
+	  var today = new Date();
+	  var myday = new Date('July 1, 1996');
+	  myday.setFullYear(myday.getFullYear() + 90);
+	  var myretirement = new Date('July 1, 1996');
+	  myretirement.setFullYear(myretirement.getFullYear() + 70);
+	  function datediff(first, second) {
+	    return Math.floor(( Date.parse(second) - Date.parse(first) ) / 86400000); 
+	  }
+	  var minutes = datediff(today, myretirement) * ( ((365)-261/365) * 12 + (261/365) * (12 - 8) * 60) + datediff(myretirement, myday) * 12 * 60;
+	  document.getElementById("minutes").outerHTML = numberWithCommas(parseInt(minutes));
+  }
+  set_minutes();
+  setTimeout(function() {
+	  set_minutes();
+  }, 60000);
 </script>
 
 </body>
