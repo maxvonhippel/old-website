@@ -1,5 +1,4 @@
 plugins:
   - jemoji
 
-gems:
-  - jemoji
+gems: ["jemoji"]
