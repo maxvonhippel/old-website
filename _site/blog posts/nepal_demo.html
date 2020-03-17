@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+	<!--papa parse-->
+	<script src="js/papaparse.min.js"></script>
+	<!--- dygraphs-->
+	<script src="js/dygraph-combined.js"></script>
+	<!--jquery-->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.csv.min.js"></script>
+	<script src="js/jquery.ajax-cross-origin.min.js"></script>
+	<!--css-->
+	<link href="http://www.w3schools.com/lib/w3.css" rel="stylesheet"/>
+	<link href="css/styles.css" rel="stylesheet"/>
+	<!--Leaflet-->
+	<link rel="stylesheet" href="css/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+	<script src="js/BoundaryCanvas.js"></script>
+	<script src="data/nepal-border.js"></script>
+	<!--PruneCluster-->
+	<script src="PruneCluster/dist/PruneCluster.js"></script>
+</head>
+<body>
+
+	<div class="title">
+		<h1 id="pageTitle" class="pageTitle">
+			<span id="titleOpenStreetMap">OpenStreetMap</span>
+			<span id="titleStatisticsTool">Nepal Statistics</span>
+		</h1>
+		<!--- progress bar -->
+		<div id="myProgress">
+			<div id="myBar"></div>
+		</div>
+		<!--- End of progress bar -->
+	</div>
+
+	<div class="w3-row w3-center">
+		<!-- holds map, chart, nepal statistics and selected statistics -->
+		<div id="#mapchartbox" class="w4-border w4-border-blue-grey w4-col l9 s12 w4-display-container">
+			<div id="mapid" class="w4-border w4-col l9 s10" style="position:relative">
+				<!--- Legend of Slider -->
+				<div id="dy_legend">
+					<span id="newFeatures">New Features</span><br>
+					<span id="editedFeatures">Edited Features</span>
+				</div>
+			</div>
+			<!--- end of map -->
+			<!--- start of chart -->
+			<div id="chart" class="w3-border w3-col l9 s12 chartposition"></div>
+			<!--- end of chart -->
+			<!--demo script-->
+			<script src="js/demo_map_and_chart.js"></script>
+		</div>
+	</div>
+
+	<div id="description"><font face="Hiragino sans" color=#323232 size="4">
+	This tool is a demo of some of the functionality I developed for Kathmandu Living Labs during the Fall of 2016.  This demo uses 100,000 points from user contributions to OpenStreetMap maps in Nepal.  The full version, still under development by KLL, uses a complete data set with over 3,000,000 nodes, and hundreds of thousands to millions of ways and relations (counting one per version, since this tool is history-enabled).  Check out the code <a href="https://github.com/maxvonhippel/NepalOSMHistory">here</a>.<br><br>Try clicking and dragging on the activity chart below the map to zoom in on a specific period of time.  Then double click again on the chart to zoom back out.  Note that since I just took the first 100,000 points from the complete data set, some parts of the chronology are arbitrarily empty, so there may be parts of the timeline where you won't see any points at all on the map.  This is unfortunate, but you can download the source code and render it with the full 3,000,000+ data points on your local machine if you are so inclined.<br>
+	</font></div>
+
+</body>
+</html>
+

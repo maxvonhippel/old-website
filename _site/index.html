@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Main</title>
+	<script src="https://d3js.org/d3.v3.js"></script>
+	<style>
+		#bio {
+	    	margin-top: 10px;
+			margin-bottom: 10px;
+			margin-right: 100px;
+			margin-left: 100px;
+		}
+		ol {
+	    	width: 70%;
+	    	margin: auto;
+		}
+		path {
+		  	stroke: #fff;
+		  	fill-rule: evenodd;
+		}
+		text {
+		  	font-family: Arial, sans-serif;
+		  	font-size: 12px;
+		}
+		svg {
+		    display: block;
+		    margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+
+<center><font face="Hiragino sans" color=#464646 size="7">Hi!  I'm Max.</font></center>
+<div id="bio"><font face="Hiragino sans" color=#323232 size="4">I'm a UWCCR '15, University of Arizona '19, and current Ph.D. student under the advisement of Dr. Stavros Tripakis and Dr. Cristina Nita-Rotaru at the Northeastern University Khoury College of Computer Science.  I'm interested in formal methods, pure math(s), logic, and security.  I also like writing pithy things on the internet, sending rad schlotzy slab-climbs, skateboarding, and photography with my trusty Fujifilm X-Pro1.  This is my website.  Click <a href="https://github.com/maxvonhippel">here</a> to see what I'm currently coding, or <b>click</b> on the table of contents below to see what else I'm up to!  (Note my online resume is infrequently updated; email me directly for more current information.)</font></div>
+
+<p id="NOJS">If you can read this, then my groovy table of contents is disabled on your system, probably because you have some sort of Javascript blocker.  That's fine though.  If you're technical enough to disable Javascript and to prefer not to enable it after reading this disclaimer, I think you're probably technical enough to just peruse the raw JSON file <a href="https://mxvh.pl/data/contents.json">HERE</a>.  Feel free to shoot me an email at maxvonhippel@gmail.com if you have any questions!</p>
+
+<div id="chart"></div>
+<script type="text/javascript">
+// DATA BELOW, BLAME CORS FOR THIS HIDEOUSNESS
+var thedata = [{
+ "name": "Contents",
+ "children": [
+  {
+    "name": "Essays",
+    "children": [
+      {"name": "Storm", "size": 2, "url": "blog posts/storm.html"},
+      {"name": "Francesca", "size": 2, "url": "blog posts/Ches.html"},
+      {"name": "Talent", "size": 2, "url": "blog posts/Talent.html"},
+      {"name": "Shibboleths", "size": 2, "url": "blog posts/Shibboleths.html"},
+      {"name": "Time", "size": 2, "url": "blog posts/TimeWellSpent.html"}
+    ]
+  },
+    {
+     "name": "Coding",
+     "children": [
+        {"name": "General Electric", "size": 2, "url": "http://mxvh.pl/GE"},
+          {"name": "Resume", "size": 2, "url": "http://mxvh.pl/resume/"},
+          {"name": "QIIME 2", "size": 2, "url": "https://github.com/qiime2"},
+          {"name": "OSM Client", "size": 2, "url": "blog posts/nepal_demo.html"},
+        {"name": "OSM Server", "size": 2, "url": "https://github.com/maxvonhippel/OSMHistoryServer"},
+          {"name": "Chetawani", "size": 2, "url": "https://github.com/maxvonhippel/Chetawani"},
+        {"name": "iOS Graveyard", "size": 2, "url": "https://github.com/maxvonhippel/iOS-Graveyard"}
+      ]
+    },
+    {
+      "name": "Photos",
+      "children": [
+     {"name": "Best Of", "size": 2, "url": "/blog posts/photography.html"},
+     {"name": "Road Trip", "size": 2, "url": "/blog posts/roadtrip.html"},
+     {"name": "500px", "size": 2, "url": "https://500px.com/maxvonhippel"}
+      ]
+    },
+    {
+      "name": "Humor",
+      "children": [
+          {"name": "AK Heard", "size": 2, "url": "https://twitter.com/alaskaheard"},
+          {"name": "Nietzsche", "size": 2, "url": "https://twitter.com/HiphopNietzsche"}
+      ]
+    },
+    {
+      "name": "Me Online",
+      "children": [
+        {"name": "Stack Overflow", "size": 2, "url": "http://stackoverflow.com/users/1586231/max-von-hippel"},
+        {"name": "Keybase.io", "size": 2, "url": "https://keybase.io/maxvonhippel"},
+        {"name": "GitHub", "size": 2, "url": "https://github.com/maxvonhippel/"},
+        {"name": "YouTube", "size": 2, "url": "https://www.youtube.com/c/MaxvonHippel"}
+      ]
+    },
+    {
+      "name": "Press, etc.",
+      "children": [
+        {"name": "Infinity Dental", "size": 2, "url": "https://www.infinitydentalweb.com/scholarship-winners.html"},
+      {"name": "Davis UWC", "size": 2, "url": "http://www.davisuwcscholars.org/scholars/class-of-2019/v/node/12685"},
+        {"name": "Quake Summit", "size": 2, "url": "http://dickey.dartmouth.edu/global-engagement/conferences-initiatives/nepal-earthquake-summit"},
+        {"name": "2016", "size": 2, "url": "http://www.thedartmouth.com/article/2015/10/an-eye-for-innovation/"},
+        {"name": "1996", "size": 2, "url": "http://www.dartmouth.org/classes/89/Newsletters/1997%20March.htm"},
+        {"name": "2002!", "size": 2, "url": "http://www.pitt.edu/~atsea/atsea.html"},
+        {"name": "ZipLine", "size": 2, "url": "http://atitlanreserva.com/wp/en/2015/08/11/ziptrek-footage/"},
+        {"name": "Andreesen", "size": 2, "url": "http://www.internethistorypodcast.com/2015/10/this-is-really-cool/"},
+        {"name": "Hacking Voting", "size": 2, "url": "https://www.facebook.com/NowThisPolitics/videos/1892166217481526/"}
+      ]
+    }
+ ]
+}];
+// CODE BELOW
+document.getElementById("NOJS").outerHTML = "";
+
+var width = 960,
+    height = 1000,
+    radius = Math.min(width, height) / 2;
+
+var x = d3.scale.linear()
+    .range([0, 2 * Math.PI]);
+
+var y = d3.scale.linear()
+    .range([0, radius]);
+
+var color = d3.scale.category20c();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(" + width / 2 + "," + (height / 2 + 10) + ")");
+
+var partition = d3.layout.partition()
+    .value(function(d) { return d.size; });
+
+var arc = d3.svg.arc()
+    .startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x))); })
+    .endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x + d.dx))); })
+    .innerRadius(function(d) { return Math.max(0, y(d.y)); })
+    .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
+
+
+root = thedata[0];
+var g = svg.selectAll("g")
+    .data(partition.nodes(root))
+  .enter().append("g");
+
+var path = g.append("path")
+  .attr("d", arc)
+  .style("fill", function(d) { return color((d.children ? d : d.parent).name); })
+  .on("click", click);
+
+var text = g.append("text")
+  .attr("transform", function(d) { return "rotate(" + computeTextRotation(d) + ")"; })
+  .attr("x", function(d) { return y(d.y); })
+  .attr("dx", "6") // margin
+  .attr("dy", ".35em") // vertical-align
+  .on("click", click)
+  .text(function(d) { return d.name; });
+
+function click(d) {
+  if (d.url != null) {
+    location.href = d.url;
+  }
+  // fade out all text elements
+  text.transition().attr("opacity", 0);
+
+  path.transition()
+  .duration(750)
+  .attrTween("d", arcTween(d))
+  .each("end", function(e, i) {
+          // check if the animated element's data e lies within the visible angle span given in d
+          if (e.x >= d.x && e.x < (d.x + d.dx)) {
+
+        var arcText = d3.select(this.parentNode).select("text");
+        // fade in the text element and recalculate positions
+        arcText.transition().duration(750)
+        .attr("opacity", 1)
+        .attr("transform", function() { return "rotate(" + computeTextRotation(e) + ")" })
+        .attr("x", function(d) { return y(d.y); });
+          }
+  });
+}
+
+
+
+d3.select(self.frameElement).style("height", height + "px");
+
+// Interpolate the scales!
+function arcTween(d) {
+  var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
+      yd = d3.interpolate(y.domain(), [d.y, 1]),
+      yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+  return function(d, i) {
+    return i
+        ? function(t) { return arc(d); }
+        : function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); return arc(d); };
+  };
+}
+
+function computeTextRotation(d) {
+  return (x(d.x + d.dx / 2) - Math.PI / 2) / Math.PI * 180;
+}
+</script>
+
+</body>
+</html>
